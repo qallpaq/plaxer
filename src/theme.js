@@ -8,12 +8,13 @@ const theme = createMuiTheme({
                 body: {
                     backgroundColor: "#000",
                     fontFamily: 'ProximaNova, sans-serif',
+                    color: '#fff',
                 },
             }
         },
         MuiButton: {
             root: {
-                background: 'linear-gradient(45deg, #9a50fc 5%, #0750d0 95%)',
+                background: 'linear-gradient(315deg, #a1052c 0%, #0750d0 100%)',
                 borderRadius: 0,
                 border: 0,
                 color: 'white',
@@ -22,6 +23,7 @@ const theme = createMuiTheme({
                 fontWeight: 600,
             },
             text: {
+                fontFamily: 'Poppins, sans-serif',
                 padding: '8px 20px',
             }
         },
@@ -39,14 +41,39 @@ const theme = createMuiTheme({
         }
     },
     typography: {
-        fontFamily: 'ProximaNova, sans-serif',
-        color: '#fff',
-        lineHeight: 1,
+        body1: {
+            fontFamily: 'ProximaNova, sans-serif',
+        },
+        body2: {
+            fontFamily: 'ProximaNova, sans-serif',
+        },
+        h1: {
+            fontFamily: 'Raleway, sans-serif'
+        },
+        h2: {
+            fontFamily: 'Raleway, sans-serif'
+        },
         h3: {
-            color: '#fff',
-            lineHeight: 1,
-        }
+            fontFamily: 'Raleway, sans-serif'
+        },
+        h4: {
+            fontFamily: 'Raleway, sans-serif'
+        },
+        h5: {
+            fontFamily: 'Raleway, sans-serif'
+        },
+        h6: {
+            fontFamily: 'Raleway, sans-serif'
+        },
     },
+    palette: {
+        primary: {
+            main: '#0750d0'
+        },
+        secondary: {
+            main: '#9a50fc'
+        }
+    }
 })
 
 export default theme

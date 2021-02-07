@@ -1,0 +1,88 @@
+.home-page__content__slider .slick-slider {
+    height: 340px;
+}
+
+.slider-img-wrapper {
+    height: 270px;
+}
+
+.slider-svg-wrapper {
+    right: 30px;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.slider-svg-wrapper_dota {
+    top: 20px;
+    height: 55px;
+    width: 55px;
+}
+
+.slider-svg-wrapper img {
+    height: 100%;
+}
+
+.slider-img-wrapper img {
+    height: 100%;
+}
+
+.content-slider-item {
+    cursor: pointer;
+    position: relative;
+    padding: 0 20px;
+}
+
+.content-slider__text {
+    display: flex;
+}
+
+.content-slider-title {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    font-weight: 600;
+    padding: 13px 15px;
+    background: rgba(9, 6, 17, 0.7);
+    font-size: 21px;
+}
+
+.content-slider-subtitle {
+    display: flex;
+    width: 100%;
+}
+
+.content-slider__left {
+    display: flex;
+    flex-grow: 1;
+}
+
+.content-slider__left-item {
+    margin-right: 20px;
+}
+
+.MuiTypography-root.left-item__down.MuiTypography-body1 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.MuiTypography-root.left-item__upper.MuiTypography-body1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: -20px;
+}
+
+.slick-prev, .slick-next {
+    top: -10%;
+}
+
+.slick-arrow.slick-prev {
+    left: 68%;
+}
+
+.home-page__content__slider .slick-arrow.slick-next {
+    right: 28%;
+}

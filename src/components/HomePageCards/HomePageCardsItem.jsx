@@ -1,7 +1,7 @@
 import React from "react"
 import {Card, CardMedia, CardContent, Typography} from "@material-ui/core"
 import PropTypes from 'prop-types'
-import useStyles from "./homePageCardsItemStyles"
+import useStyles from "./styles/homePageCardsItemStyles"
 
 
 function HomePageCardsItem({img, title, subtitle}) {
@@ -16,10 +16,15 @@ function HomePageCardsItem({img, title, subtitle}) {
                            title="Contemplative Reptile"/>
             </div>
             <CardContent>
-                <Typography gutterBottom variant="h5" component="h2" align='center'>
+                <Typography gutterBottom
+                            variant="h5"
+                            component="h2"
+                            align='center'>
                     {title}
                 </Typography>
-                <Typography variant="body2" component="p" align='center'>
+                <Typography variant="body2"
+                            component="p"
+                            align='center'>
                     {subtitle}
                 </Typography>
             </CardContent>

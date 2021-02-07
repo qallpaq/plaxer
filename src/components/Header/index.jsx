@@ -21,7 +21,7 @@ import {
     ListItemText,
     Container,
 } from '@material-ui/core'
-import useStyles from "./headerStyles"
+import useStyles from "./styles"
 import logo from '../../assets/images/logo.png'
 
 

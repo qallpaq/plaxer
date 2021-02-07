@@ -4,9 +4,12 @@ import HomePageCardsItem from "./HomePageCardsItem"
 import cup from '../../assets/images/cup.svg'
 import twitch from '../../assets/images/twitch.svg'
 import joystick from '../../assets/images/joystick.svg'
+import useStyles from "./styles/styles"
 
 
 const HomePageCards = () => {
+    const classes = useStyles()
+
     const cardsData = [
         {
             img: cup,
@@ -26,11 +29,14 @@ const HomePageCards = () => {
     ]
 
     return (
-        <div style={{backgroundImage: 'linear-gradient(90deg, #110513 0%, #100b19 100%)'}}>
+        <div className={classes.root}>
             <Container>
-                <Grid container spacing={2}>
+                <Grid className={classes.items}
+                      spacing={3}
+                      container>
                     {cardsData.map(card => (
-                        <Grid item
+                        <Grid className={classes.item}
+                              item
                               xs={12}
                               sm={6}
                               md={4}
