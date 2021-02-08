@@ -1,4 +1,4 @@
-import {makeStyles} from "@material-ui/core"
+import { makeStyles } from '@material-ui/core'
 
 
 const useStyles = makeStyles({
@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     title: {
         fontSize: '40px',
         marginBottom: '20px',
+        fontWeight: '600',
         lineHeight: '1',
     },
     subtitle: {
@@ -17,7 +18,6 @@ const useStyles = makeStyles({
     player: {
         maxWidth: '100%',
     },
-    button: {}
 })
 
 export default useStyles

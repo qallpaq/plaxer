@@ -1,12 +1,12 @@
-import {createMuiTheme} from "@material-ui/core"
+import { createMuiTheme } from '@material-ui/core'
 
 
 const theme = createMuiTheme({
     overrides: {
         MuiCssBaseline: {
-            "@global": {
+            '@global': {
                 body: {
-                    backgroundColor: "#000",
+                    backgroundColor: '#000',
                     fontFamily: 'ProximaNova, sans-serif',
                     color: '#fff',
                 },
@@ -17,7 +17,7 @@ const theme = createMuiTheme({
                 background: 'linear-gradient(315deg, #a1052c 0%, #0750d0 100%)',
                 borderRadius: 0,
                 border: 0,
-                color: 'white',
+                color: '#fff',
                 textTransform: 'none',
                 fontSize: '18px',
                 fontWeight: 600,
@@ -43,27 +43,35 @@ const theme = createMuiTheme({
     typography: {
         body1: {
             fontFamily: 'ProximaNova, sans-serif',
+            color: '#fff',
         },
         body2: {
             fontFamily: 'ProximaNova, sans-serif',
+            color: '#fff',
         },
         h1: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
         h2: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
         h3: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
         h4: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
         h5: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
         h6: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
         },
     },
     palette: {

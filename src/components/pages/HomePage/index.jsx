@@ -1,8 +1,9 @@
 import React from 'react'
-import HomePageSlider from "../../HomePageSlider"
-import HomePageCards from "../../HomePageCards"
-import HomePageVideo from "../../HomePageVideo"
-import HomePageContentSlider from "../../HomePageContentSlider"
+import HomePageSlider from '../../HomePageSlider'
+import HomePageCards from '../../HomePageCards'
+import HomePageVideo from '../../HomePageVideo'
+import HomePageContentSlider from '../../HomePageContentSlider'
+import TabsComponent from '../../Tabs'
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
             <HomePageCards/>
             <HomePageVideo/>
             <HomePageContentSlider/>
+            <TabsComponent/>
         </div>
     )
 }

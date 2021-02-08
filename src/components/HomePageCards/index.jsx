@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Grid} from "@material-ui/core"
-import HomePageCardsItem from "./HomePageCardsItem"
+import { Container, Grid } from '@material-ui/core'
+import HomePageCardsItem from './HomePageCardsItem'
 import cup from '../../assets/images/cup.svg'
 import twitch from '../../assets/images/twitch.svg'
 import joystick from '../../assets/images/joystick.svg'
-import useStyles from "./styles/styles"
+import useStyles from './styles/styles'
 
 
 const HomePageCards = () => {
@@ -29,21 +29,19 @@ const HomePageCards = () => {
     ]
 
     return (
-        <div className={classes.root}>
+        <div className={ classes.root }>
             <Container>
-                <Grid className={classes.items}
-                      spacing={3}
+                <Grid spacing={ 3 }
                       container>
-                    {cardsData.map(card => (
-                        <Grid className={classes.item}
-                              item
-                              xs={12}
-                              sm={6}
-                              md={4}
-                              key={card.title}>
-                            <HomePageCardsItem {...card}/>
+                    { cardsData.map(card => (
+                        <Grid item
+                              xs={ 12 }
+                              sm={ 6 }
+                              md={ 4 }
+                              key={ card.title }>
+                            <HomePageCardsItem { ...card }/>
                         </Grid>
-                    ))}
+                    )) }
                 </Grid>
             </Container>
         </div>

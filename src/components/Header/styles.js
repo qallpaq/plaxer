@@ -1,4 +1,4 @@
-import {makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from '@material-ui/core/styles'
 
 
 const drawerWidth = 240
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: '0',
     },
     appBar: {
-        transition: theme.transitions.create(['margin', 'width'], {
+        transition: theme.transitions.create([ 'margin', 'width' ], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
     appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['margin', 'width'], {
+        width: `calc(100% - ${ drawerWidth }px)`,
+        transition: theme.transitions.create([ 'margin', 'width' ], {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,
         }),
