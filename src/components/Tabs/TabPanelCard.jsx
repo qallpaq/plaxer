@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 const TabPanelCard = (props) => {
     const { name, number, img, win } = props
 
-    const classes = useStyles(number)
+    const classes = useStyles()
 
     return (
         <Card className={ classes.root }>

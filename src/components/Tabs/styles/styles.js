@@ -12,6 +12,9 @@ const useStyles = makeStyles({
     },
     title: {
         flexGrow: '1',
+        fontWeight: '600',
+        fontSize: '40px',
+        marginBottom: '10px'
     },
 })
 

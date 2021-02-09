@@ -1,12 +1,12 @@
 const CSGO = 'CSGO'
-const DOTA = 'DOTA'
+const DOTA_2 = 'DOTA 2'
 const FORTNITE = 'FORTNITE'
 const PUBG = 'PUBG'
 const ALL = 'ALL'
 
 export {
     CSGO,
-    DOTA,
+    DOTA_2,
     FORTNITE,
     PUBG,
     ALL

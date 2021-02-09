@@ -1,4 +1,4 @@
-import { teams } from '../data'
+import teams from '../data'
 
 
 const initialState = {

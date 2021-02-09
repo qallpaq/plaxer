@@ -79,10 +79,15 @@
     position: absolute;
     z-index: 2;
     bottom: 50px;
-    left:20px;
+    left: 20px;
 }
 
 .icon__item {
     color: #ffffff;
     margin: -5px;
+    transition: .2s;
+}
+
+.icon__item:hover {
+    color: #0750d0;
 }

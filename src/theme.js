@@ -9,17 +9,18 @@ const theme = createMuiTheme({
                     backgroundColor: '#000',
                     fontFamily: 'ProximaNova, sans-serif',
                     color: '#fff',
+                    overflowX: 'hidden',
                 },
             }
         },
         MuiButton: {
             root: {
-                background: 'linear-gradient(315deg, #a1052c 0%, #0750d0 100%)',
+                background: 'linear-gradient(90deg, rgba(84,18,148,1) 3%, rgba(50,84,164,1) 27%, rgba(34,28,134,1) 100%)',
                 borderRadius: 0,
                 border: 0,
                 color: '#fff',
                 textTransform: 'none',
-                fontSize: '18px',
+                fontSize: '15px',
                 fontWeight: 600,
             },
             text: {

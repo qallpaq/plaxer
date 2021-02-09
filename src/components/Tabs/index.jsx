@@ -8,42 +8,33 @@ import {
     Typography
 } from '@material-ui/core'
 import TabPanel from './TabPanel'
-import { ALL, CSGO, DOTA, FORTNITE, PUBG } from './constants'
+import { ALL, CSGO, DOTA_2, FORTNITE, PUBG } from './constants'
 import useStyles from './styles/styles'
-import PropTypes from 'prop-types'
 
-
-function a11yProps(index) {
-    return {
-        id: `simple-tab-${ index }`,
-        'aria-controls': `simple-tabpanel-${ index }`,
-    }
-}
 
 const teamsToJSX = (teams, key, index, value) => {
-    const mapTeamsToProps = item => {
-        return teams[item].map(item => {
-            return <TabPanel index={ index }
-                             value={ value }
-                             item={ item }
-                             key={ Math.random() * 100 }/>
-        })
+    const mapTeamToProps = obj => {
+        return <TabPanel index={ index }
+                         value={ value }
+                         key={ Math.random() * 100 }
+                         item={ obj }/>
     }
 
     return key === ALL
-        ? Object.keys(teams).map(key => mapTeamsToProps(key))
-        : mapTeamsToProps(key)
-}
-
-teamsToJSX.propTypes = {
-    teams: PropTypes.node,
-    key: PropTypes.any.isRequired,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.object.isRequired
+        ? teams.map(mapTeamToProps)
+        : teams.filter(item => item.title === key)
+            .map(mapTeamToProps)
 }
 
 const tabsHeaderToJSX = () => {
-    const tabsHeader = [ ALL, DOTA, FORTNITE, PUBG, CSGO ]
+    function a11yProps(index) {
+        return {
+            id: `simple-tab-${ index }`,
+            'aria-controls': `simple-tabpanel-${ index }`,
+        }
+    }
+
+    const tabsHeader = [ ALL, DOTA_2, FORTNITE, PUBG, CSGO ]
 
     return tabsHeader.map((item, index) => {
         return <Tab style={ { textTransform: 'uppercase', minWidth: '100px' } }
@@ -54,6 +45,7 @@ const tabsHeaderToJSX = () => {
 }
 
 const TabsComponent = () => {
+    const teams = useSelector(state => state.root.teams)
     const classes = useStyles()
 
     const [ value, setValue ] = useState(0)
@@ -61,15 +53,13 @@ const TabsComponent = () => {
         setValue(newValue)
     }
 
-    const teams = useSelector(state => state.root.teams)
-
     return (
         <Container className={ classes.root }>
             <AppBar position="static"
                     className={ classes.bar }>
 
-                <Typography className={ classes.title }>
-                    Latest Matches
+                <Typography className={ classes.title } variant='h4'>
+                    Latest matches
                 </Typography>
 
                 <Tabs value={ value }
@@ -80,7 +70,7 @@ const TabsComponent = () => {
 
             </AppBar>
             { teamsToJSX(teams, ALL, 0, value) }
-            { teamsToJSX(teams, DOTA, 1, value) }
+            { teamsToJSX(teams, DOTA_2, 1, value) }
             { teamsToJSX(teams, FORTNITE, 2, value) }
             { teamsToJSX(teams, PUBG, 3, value) }
             { teamsToJSX(teams, CSGO, 4, value) }
