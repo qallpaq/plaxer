@@ -1,27 +1,30 @@
-import {createMuiTheme} from "@material-ui/core"
+import { createMuiTheme } from '@material-ui/core'
 
 
 const theme = createMuiTheme({
     overrides: {
         MuiCssBaseline: {
-            "@global": {
+            '@global': {
                 body: {
-                    backgroundColor: "#000",
+                    backgroundColor: '#000',
                     fontFamily: 'ProximaNova, sans-serif',
+                    color: '#fff',
+                    overflowX: 'hidden',
                 },
             }
         },
         MuiButton: {
             root: {
-                background: 'linear-gradient(45deg, #9a50fc 5%, #0750d0 95%)',
+                background: 'linear-gradient(90deg, rgba(84,18,148,1) 3%, rgba(50,84,164,1) 27%, rgba(34,28,134,1) 100%)',
                 borderRadius: 0,
                 border: 0,
-                color: 'white',
+                color: '#fff',
                 textTransform: 'none',
-                fontSize: '18px',
+                fontSize: '16px',
                 fontWeight: 600,
             },
             text: {
+                fontFamily: 'Poppins, sans-serif',
                 padding: '8px 20px',
             }
         },
@@ -39,14 +42,47 @@ const theme = createMuiTheme({
         }
     },
     typography: {
-        fontFamily: 'ProximaNova, sans-serif',
-        color: '#fff',
-        lineHeight: 1,
-        h3: {
+        body1: {
+            fontFamily: 'ProximaNova, sans-serif',
             color: '#fff',
-            lineHeight: 1,
-        }
+        },
+        body2: {
+            fontFamily: 'ProximaNova, sans-serif',
+            color: '#fff',
+        },
+        h1: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
+        h2: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
+        h3: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
+        h4: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
+        h5: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
+        h6: {
+            fontFamily: 'Raleway, sans-serif',
+            color: '#fff',
+        },
     },
+    palette: {
+        primary: {
+            main: '#0750d0'
+        },
+        secondary: {
+            main: '#9a50fc'
+        }
+    }
 })
 
 export default theme

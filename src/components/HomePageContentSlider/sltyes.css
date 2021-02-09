@@ -1,0 +1,138 @@
+.home-page__content__slider .slick-slider {
+    height: 340px;
+}
+
+.slider-img-wrapper {
+    height: 270px;
+    position: relative;
+}
+
+.slider-svg-wrapper {
+    right: 30px;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.slider-svg-wrapper_dota {
+    top: 20px;
+    height: 55px;
+    width: 55px;
+}
+
+.slider-svg-wrapper img {
+    height: 100%;
+}
+
+.slider-img-wrapper img {
+    height: 100%;
+}
+
+.content-slider-item {
+    cursor: pointer;
+    position: relative;
+    padding: 0 20px;
+}
+
+.content-slider__text {
+    display: flex;
+}
+
+.content-slider-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    padding: 13px 15px;
+    background: rgba(9, 6, 17, 0.6);
+    font-size: 21px;
+}
+
+.content-slider-subtitle {
+    display: flex;
+    width: 100%;
+}
+
+.content-slider__left {
+    display: flex;
+    flex-grow: 1;
+}
+
+.content-slider__left-item {
+    margin-right: 20px;
+}
+
+.MuiTypography-root.left-item__down.MuiTypography-body1 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.MuiTypography-root.left-item__upper.MuiTypography-body1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: -20px;
+}
+
+.home-page__content__slider .slick-arrow {
+    display: none !important;
+}
+
+@media screen and (max-width: 1600px) {
+    .home-page__content__slider .slick-slider {
+        height: 290px;
+    }
+
+    .slider-img-wrapper {
+        height: 210px;
+        position: relative;
+    }
+
+    .content-slider-title {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .MuiTypography-root.left-item__down.MuiTypography-body1 {
+        font-size: 14px;
+    }
+
+    .MuiTypography-root.left-item__upper.MuiTypography-body1 {
+        font-size: 10px;
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content-slider__left {
+        display: none;
+    }
+
+    .home-page__content__slider .slick-slider {
+        height: 230px;
+    }
+
+    .slider-img-wrapper {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-page__content__slider .slick-slider {
+        height: 190px;
+    }
+
+    .slider-img-wrapper {
+        height: 120px;
+    }
+
+    .content-slider__right {
+        font-size: 12px;
+    }
+
+    .content-slider-title {
+        font-size: 14px;
+    }
+}

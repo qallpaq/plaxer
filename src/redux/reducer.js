@@ -1,5 +1,9 @@
+import teams from '../data'
+
+
 const initialState = {
-    isFetching: false,
+    test: false,
+    teams: teams
 }
 
 const reducer = (state = initialState, action) => {
@@ -7,7 +11,7 @@ const reducer = (state = initialState, action) => {
         case 'TEST':
             return {
                 ...state,
-                isFetching: true
+                test: true
             }
         default:
             return state
