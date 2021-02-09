@@ -29,7 +29,7 @@ const FooterComments = () => {
             <CommentsItem author={ 'Iven Jacombo' }
                           text={ 'Designing for the Web in 2020' }/>
 
-            <CommentsItem author={ 'Anton Urin' }
+            <CommentsItem author={ 'Onton Urin' }
                           text={ 'Streamlining the Path to Conversion' }/>
         </Grid>
     )

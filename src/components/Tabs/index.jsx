@@ -26,24 +26,6 @@ const teamsToJSX = (teams, key, index, value) => {
             .map(mapTeamToProps)
 }
 
-const tabsHeaderToJSX = () => {
-    function a11yProps(index) {
-        return {
-            id: `simple-tab-${ index }`,
-            'aria-controls': `simple-tabpanel-${ index }`,
-        }
-    }
-
-    const tabsHeader = [ ALL, DOTA_2, FORTNITE, PUBG, CSGO ]
-
-    return tabsHeader.map((item, index) => {
-        return <Tab style={ { textTransform: 'uppercase', minWidth: '100px' } }
-                    label={ item }
-                    key={ Math.random() * 100 }
-                    { ...a11yProps(index) }/>
-    })
-}
-
 const TabsComponent = () => {
     const teams = useSelector(state => state.root.teams)
     const classes = useStyles()
@@ -51,6 +33,24 @@ const TabsComponent = () => {
     const [ value, setValue ] = useState(0)
     const handleChange = (event, newValue) => {
         setValue(newValue)
+    }
+
+    const tabsHeaderToJSX = () => {
+        function a11yProps(index) {
+            return {
+                id: `simple-tab-${ index }`,
+                'aria-controls': `simple-tabpanel-${ index }`,
+            }
+        }
+
+        const tabsHeader = [ ALL, DOTA_2, FORTNITE, PUBG, CSGO ]
+
+        return tabsHeader.map((item, index) => {
+            return <Tab className={ classes.tab }
+                        label={ item }
+                        key={ Math.random() * 100 }
+                        { ...a11yProps(index) }/>
+        })
     }
 
     return (

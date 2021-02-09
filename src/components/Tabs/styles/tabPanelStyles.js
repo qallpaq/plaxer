@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {
         background: '#110719',
         borderBottom: '1px solid #413b49',
@@ -33,6 +33,12 @@ const useStyles = makeStyles({
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            textAlign: 'center',
+            margin: '10px auto',
+            paddingLeft: '0',
+        },
     },
     title: {
         fontSize: '20px',
@@ -40,11 +46,21 @@ const useStyles = makeStyles({
         fontWeight: '600',
         fontFamily: 'Poppins',
         cursor: 'pointer',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '16px',
+        },
     },
     date: {
         textTransform: 'uppercase',
         fontSize: '14px',
         fontWeight: '600',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            marginBottom: '10px',
+        },
     },
     stream: {
         display: 'flex',
@@ -64,6 +80,6 @@ const useStyles = makeStyles({
         marginRight: '5px',
         cursor: 'pointer',
     }
-})
+}))
 
 export default useStyles

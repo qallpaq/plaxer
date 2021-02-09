@@ -24,7 +24,7 @@ const TabPanel = props => {
                       container>
                     <Grid className={ classes.item }
                           item
-                          md={ 4 }>
+                          xs={ 12 } md={ 4 }>
                         <TabPanelCard { ...item.team1 }/>
 
                         <Typography className={ classes.versus }>
@@ -33,7 +33,8 @@ const TabPanel = props => {
 
                         <TabPanelCard { ...item.team2 }/>
                     </Grid>
-                    <Grid item md={ 6 }>
+
+                    <Grid item xs={ 12 } md={ 6 }>
                         <div className={ classes.text }>
                             <Typography className={ classes.title }>
                                 eSport League - { item.title } Division
@@ -44,7 +45,8 @@ const TabPanel = props => {
                             </Typography>
                         </div>
                     </Grid>
-                    <Grid item md={ 2 } className={ classes.stream }>
+
+                    <Grid item xs={ 12 } md={ 2 } className={ classes.stream }>
                         <Typography className={ classes.twitch }>
                             <img className={ classes.twitchLogo }
                                  src={ twitch }

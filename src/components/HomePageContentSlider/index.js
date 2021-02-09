@@ -49,6 +49,20 @@ export default class HomePageContentSlider extends Component {
             swipeToSlide: true,
             slidesToShow: 4,
             touchThreshold: 12,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+            ]
         }
 
         const isDota = slide => slide.svg === dotaLogo ? 'slider-svg-wrapper_dota' : ''

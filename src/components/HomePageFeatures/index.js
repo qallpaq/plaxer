@@ -35,7 +35,7 @@ const HomePageFeatures = () => {
                              name='pro teams'/>
 
                 <Grid item xs={ 12 }>
-                    <Typography variant='h4' align='center'>
+                    <Typography variant='h4' align='center' className={ classes.footer }>
                         Share with
                         <span className={ classes.share }>#plaxer</span>
                     </Typography>

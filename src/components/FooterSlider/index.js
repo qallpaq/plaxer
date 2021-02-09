@@ -36,12 +36,32 @@ export default class FooterSlider extends Component {
             slidesToShow: 7,
             touchThreshold: 12,
             dots: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+            ]
         }
 
         const createSlide = slide => {
             return (
                 <img className='slider__item-img'
-                     key={slide}
+                     key={ slide }
                      src={ slide }
                      alt="slide"/>
             )

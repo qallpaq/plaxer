@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {
         padding: '100px 0'
     },
@@ -10,14 +10,14 @@ const useStyles = makeStyles({
         marginBottom: '20px',
         fontWeight: '600',
         lineHeight: '1',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '30px',
+        }
     },
     subtitle: {
         marginBottom: '20px',
         fontWeight: '200',
     },
-    player: {
-        maxWidth: '100%',
-    },
-})
+}))
 
 export default useStyles
