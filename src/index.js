@@ -9,12 +9,12 @@ import App from './components/App'
 
 
 ReactDOM.render(
-    <Provider store={store}>
-        <ThemeProvider theme={theme}>
-            <Router>
-                <App/>
-            </Router>
-        </ThemeProvider>
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <App/>
+      </Router>
+    </ThemeProvider>
+  </Provider>,
+  document.getElementById('root')
 )

@@ -3,7 +3,7 @@ import reducer from './reducer'
 
 
 const reducers = combineReducers({
-    root: reducer
+  root: reducer
 })
 
 const store = createStore(reducers)

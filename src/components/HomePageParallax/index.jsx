@@ -1,30 +1,44 @@
 import React from 'react'
-import { Container, Typography, Button } from '@material-ui/core'
-import useStyles from './styles'
+import {
+  Container,
+  Typography,
+  Button
+} from '@material-ui/core'
+import useStyles from './styles/styles'
+import { motion } from 'framer-motion'
+import { useScroll } from '../../helpers'
+import fadeInUp from './styles/animation'
 
 
 const HomePageParallax = () => {
-    const classes = useStyles()
+  const classes = useStyles()
 
-    return (
-        <div className={ classes.root }>
-            <Container className={ classes.inner }>
-                <Typography className={ classes.title } variant='h2'>
-                    unicon & game expo
-                </Typography>
+  const [element, controls] = useScroll()
 
-                <Typography className={ classes.subtitle }>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Aliquid architecto atque autem dolores
-                    Jacombo.
-                </Typography>
-
-                <Button>
-                    View shedule
-                </Button>
-            </Container>
-        </div>
-    )
+  return (
+    <div className={classes.root}>
+      <Container
+        component={motion.div}
+        ref={element}
+        variants={fadeInUp}
+        initial="hidden"
+        animate={controls}
+      >
+        <Typography className={classes.title}>
+          baralmadym & Qasina
+        </Typography>
+        <Typography className={classes.subtitle}>
+          Mаhаbbаt bаğındаğı
+          Sаyrаğаn bŭlbŭl edіñ
+          Sol bаqtаğı qızıl gülderden
+          Tаndаğаnım sen edіñ
+        </Typography>
+        <Button>
+          View shedule
+        </Button>
+      </Container>
+    </div>
+  )
 }
 
 export default HomePageParallax
