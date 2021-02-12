@@ -9,10 +9,13 @@ const theme = createMuiTheme({
           backgroundColor: '#000',
           fontFamily: 'ProximaNova, sans-serif',
           color: '#fff',
-          overflowX: 'hidden',
+          overflowX: 'hidden'
         },
         a: {
           textDecoration: 'none'
+        },
+        '*': {
+          outline: 'none'
         }
       }
     },
@@ -25,59 +28,59 @@ const theme = createMuiTheme({
         textTransform: 'none',
         fontSize: '16px',
         fontWeight: 600,
-        transition: '.2s',
+        transition: '.2s'
       },
       text: {
         fontFamily: 'Poppins, sans-serif',
-        padding: '8px 20px',
+        padding: '8px 20px'
       }
     },
     MuiContainer: {
       root: {
         '@media (min-width: 1280px)': {
           maxWidth: '1200px'
-        },
+        }
       },
       maxWidthLg: {
         '@media (min-width: 1280px)': {
           maxWidth: '1200px'
-        },
+        }
       }
     }
   },
   typography: {
     body1: {
       fontFamily: 'ProximaNova, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     body2: {
       fontFamily: 'ProximaNova, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h1: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h2: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h3: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h4: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h5: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
+      color: '#fff'
     },
     h6: {
       fontFamily: 'Raleway, sans-serif',
-      color: '#fff',
-    },
+      color: '#fff'
+    }
   },
   palette: {
     primary: {

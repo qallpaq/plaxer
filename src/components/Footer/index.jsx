@@ -27,15 +27,15 @@ const Footer = () => {
         </Grid>
         <Divider className={classes.divider}/>
         <Grid container>
-          <Grid item xs={10}>
+          <Grid item xs={12} sm={10}>
             <Typography className={classes.text}>
               © 2019, SOMO Theme by Promo Theme
               <span className={classes.link}> Jacombo</span> |
               <span className={classes.link}> Urin</span> |
-              <span className={classes.link}> Khan</span>
+              <span className={classes.link}> Molisher</span>
             </Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={2}>
             <Typography className={classes.text} align='right'>
               All Rights Reserved.
             </Typography>

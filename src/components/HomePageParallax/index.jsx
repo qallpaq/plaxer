@@ -21,7 +21,6 @@ const HomePageParallax = () => {
         component={motion.div}
         ref={element}
         variants={fadeInUp}
-        initial="hidden"
         animate={controls}
       >
         <Typography className={classes.title}>

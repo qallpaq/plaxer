@@ -16,9 +16,6 @@ const useStyles = makeStyles(theme => ({
   name: {
     opacity: '.7',
   },
-  wrapper: {
-    padding: '0',
-  },
   icon: {
     margin: '0 -3px',
     color: '#fff',

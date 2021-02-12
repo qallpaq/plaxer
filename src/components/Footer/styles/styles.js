@@ -4,15 +4,18 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   root: {
     background: '#272727',
-    padding: '30px 0',
+    padding: '30px 0'
   },
   divider: {
-    background: 'rgba(123,123,123,.3)',
+    background: 'rgba(123,123,123,.3)'
   },
   text: {
     fontSize: '11px',
     opacity: '.5',
     marginTop: '20px',
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center'
+    }
   },
   link: {
     cursor: 'pointer',
@@ -20,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.main
     }
-  }
+  },
 }))
 
 export default useStyles

@@ -25,15 +25,21 @@ const settings = {
   touchThreshold: 12,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1740,
       settings: {
         slidesToShow: 3,
       }
     },
     {
-      breakpoint: 800,
+      breakpoint: 1300,
       settings: {
         slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
       }
     },
   ]

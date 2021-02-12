@@ -9,47 +9,65 @@ const useStyles = makeStyles((theme) => ({
   },
   toolBar: {
     paddingLeft: '0',
-    paddingRight: '0',
+    paddingRight: '0'
   },
   appBar: {
     transition: '.4s',
     background: background => background ? '#101010' : 'transparent',
     padding: '12px 0',
-    boxShadow: 'none',
+    boxShadow: 'none'
   },
   logoWrapper: {
     flexGrow: 1
   },
   logo: {
-    width: '160px',
+    width: '160px'
   },
   menu: {
-    display: 'flex',
+    display: 'flex'
+  },
+  menuText: {
+    position: 'relative',
+    fontFamily: 'Poppins, sans-serif',
+    '&:before': {
+      content: '""',
+      transition: '.2s',
+      position: 'absolute',
+      bottom: '-5px',
+      width: '0',
+      height: '3px',
+      background: theme.palette.primary.main,
+      borderRadius: '5px'
+    },
+    '&:hover&:before': {
+      width: '100%',
+      height: '3px'
+    }
   },
   menuItem: {
-    display: 'flex',
+    display: 'flex'
   },
   hide: {
-    display: 'none',
+    display: 'none'
   },
   drawer: {
     width: drawerWidth,
-    flexShrink: 0,
+    flexShrink: 0
   },
   drawerPaper: {
     width: drawerWidth,
-    background: 'linear-gradient(180deg, rgba(52,5,97,.95) 3%, rgba(28,44,82,1) 33%, rgba(21,17,77,.95) 100%)',
+    background: '#101010'
   },
   link: {
-    color: '#fff',
+    color: '#fff'
   },
   drawerHeader: {
     display: 'flex',
     alignItems: 'center',
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-start',
-  },
+    justifyContent: 'flex-start'
+  }
 }))
 
 export default useStyles

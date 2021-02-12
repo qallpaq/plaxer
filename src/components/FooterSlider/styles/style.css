@@ -1,32 +1,63 @@
 .footer__slider .slick-slider.slick-initialized {
-  margin: 20px 0;
-  height: 200px;
+	margin: 20px 0;
+	height: 200px;
+	position: relative;
+}
+
+.slick-list {
+	overflow: visible;
 }
 
 .footer__slider .slick-slider.slick-initialized div {
-  height: 100%;
+	height: 100%;
 }
 
 .slider__item-img {
-  height: 100%;
-  padding: 2px;
-  cursor: pointer;
+	height: 100%;
+	padding: 2px;
+	cursor: pointer;
 }
 
 .footer__slider .slick-arrow {
-  display: none !important;
+	display: none !important;
+}
+
+.footer__slider-item {
+	position: relative;
+}
+
+.footer__slider-item:hover .slider__item-context {
+	opacity: 1;
+}
+
+.slider__item-context {
+	cursor: pointer;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	transition: .3s;
+	transform: translate(-50%, -50%);
+	background: rgba(19, 17, 17, 0.6);
+}
+
+@media screen and (max-width: 1023px) {
+	.slider__item-context {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 960px) {
-  .footer__slider .slick-slider.slick-initialized {
-    margin: 10px 0;
-    height: 150px;
-  }
+	.footer__slider .slick-slider.slick-initialized {
+		margin: 10px 0;
+		height: 150px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .footer__slider .slick-slider.slick-initialized {
-    margin: 10px 0;
-    height: 100px;
-  }
+	.footer__slider .slick-slider.slick-initialized {
+		margin: 10px 0;
+		height: 100px;
+	}
 }

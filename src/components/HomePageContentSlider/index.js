@@ -13,7 +13,7 @@ const SubtitleLeftItem = ({upper, down}) => (
     <Typography className='left-item__upper'>
       {upper}
     </Typography>
-    <br/>
+    <br className='content-slider__break'/>
     <Typography
       className='left-item__down'
       color='primary'

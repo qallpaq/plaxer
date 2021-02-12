@@ -17,7 +17,7 @@ const items = [
     number: '3',
     text1: 'Play with us in',
     text2: 'the all new games.'
-  },
+  }
 ]
 
 const dotsStyles = {
@@ -59,6 +59,8 @@ const settings = {
   pauseOnHover: false,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 10000,
   nextArrow: <SampleArrow/>,
   prevArrow: <SampleArrow/>,
   appendDots: createDots,

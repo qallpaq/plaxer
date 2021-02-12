@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -12,43 +14,25 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import { items, settings } from './tools'
-import { motion } from 'framer-motion'
-import { slideInLeft } from './styles/animation'
 import './styles/style.css'
 
 
-const createSlide = ({number, text1, text2}) => {
+const CreateSlide = ({number, text1, text2}) => {
   const classes = `slider__background slider__background_${number}`
 
   return (
     <div className={classes} key={text1}>
       <Container>
         <div className='slider__item-title'>
-          <motion.div
-            className='slider__figure'
-            variants={slideInLeft('.4')}
-            initial='hidden'
-            animate='visible'
-          >
+          <div className='slider__figure'>
             0{number}
-          </motion.div>
-          <Typography
-            className='title__text'
-            component={motion.h3}
-            variants={slideInLeft('1')}
-            initial='hidden'
-            animate='visible'
-          >
+          </div>
+          <Typography className='title__text' component={'h3'}>
             {text1}
             <br/>
             {text2}
           </Typography>
-          <Button
-            component={motion.button}
-            variants={slideInLeft('1')}
-            initial='hidden'
-            animate='visible'
-          >
+          <Button className='slider__btn'>
             Watch now
           </Button>
         </div>
@@ -57,21 +41,33 @@ const createSlide = ({number, text1, text2}) => {
   )
 }
 
+CreateSlide.propTypes = {
+  number: PropTypes.string.isRequired,
+  text1: PropTypes.string.isRequired,
+  text2: PropTypes.string.isRequired
+}
+
 const HomePageSlider = () => (
   <>
     <div className="home-page__icons">
       <IconButton>
-        <InstagramIcon className='icon__item' fontSize='small'/>
+        <Link to='#' className='icon__item'>
+          <InstagramIcon fontSize='small'/>
+        </Link>
       </IconButton>
       <IconButton>
-        <FacebookIcon className='icon__item' fontSize='small'/>
+        <Link to='#' className='icon__item'>
+          <FacebookIcon fontSize='small'/>
+        </Link>
       </IconButton>
       <IconButton>
-        <TwitterIcon className='icon__item' fontSize='small'/>
+        <Link to='#' className='icon__item'>
+          <TwitterIcon fontSize='small'/>
+        </Link>
       </IconButton>
     </div>
     <Slider {...settings}>
-      {items.map(createSlide)}
+      {items.map(slide => <CreateSlide {...slide} key={slide.number}/>)}
     </Slider>
   </>
 )

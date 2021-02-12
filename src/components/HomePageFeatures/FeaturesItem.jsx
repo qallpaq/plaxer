@@ -7,13 +7,24 @@ import {
   Typography
 } from '@material-ui/core'
 import useStyles from './styles/featuresItemStyles'
+import { motion } from 'framer-motion'
 
 
 const FeatureItem = ({name, number, img}) => {
   const classes = useStyles()
 
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
+
   return (
-    <Grid item xs={6} md={3}>
+    <Grid
+      component={motion.div}
+      variants={fadeIn}
+      item
+      xs={6}
+      md={3}>
       <Card className={classes.root}>
         <img
           className={classes.media}
@@ -46,7 +57,7 @@ const FeatureItem = ({name, number, img}) => {
 FeatureItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired
 }
 
 export default FeatureItem

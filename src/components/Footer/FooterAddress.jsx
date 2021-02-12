@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Grid, Typography, IconButton } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -27,14 +28,20 @@ const FooterAddress = () => {
         support@promo-theme.com
       </Typography>
       <div>
-        <IconButton className={classes.wrapper}>
-          <TwitterIcon className={classes.icon}/>
+        <IconButton onClick={e => e.preventDefault()}>
+          <Link to="#">
+            <TwitterIcon className={classes.icon}/>
+          </Link>
         </IconButton>
         <IconButton>
-          <FacebookIcon className={classes.icon}/>
+          <Link to="#">
+            <FacebookIcon className={classes.icon}/>
+          </Link>
         </IconButton>
         <IconButton>
-          <InstagramIcon className={classes.icon}/>
+          <Link to="#">
+            <InstagramIcon className={classes.icon}/>
+          </Link>
         </IconButton>
       </div>
     </Grid>

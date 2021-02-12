@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Typography,
   Grid,
-  Container,
+  Container
 } from '@material-ui/core'
 import FeatureItem from './FeaturesItem'
 import twitchLogo from '../../assets/images/twitch.svg'
@@ -10,14 +10,36 @@ import youtubeLogo from '../../assets/images/youtube-logotype.svg'
 import team from '../../assets/images/team.svg'
 import gamepad from '../../assets/images/gamepad.svg'
 import useStyles from './styles/styles'
+import { useScroll } from '../../helpers'
+import { motion } from 'framer-motion'
 
 
 const HomePageFeatures = () => {
   const classes = useStyles()
 
+  const [element, controls] = useScroll()
+
+  const container = {
+    hidden: {opacity: 0},
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  }
+
   return (
-    <Container className={classes.root}>
-      <Grid container>
+    <Container
+      className={classes.root}>
+      <Grid
+        container
+        component={motion.div}
+        ref={element}
+        variants={container}
+        animate={controls}
+      >
         <FeatureItem
           img={twitchLogo}
           number='1300+'

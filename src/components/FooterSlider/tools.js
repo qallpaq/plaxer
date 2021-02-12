@@ -30,6 +30,8 @@ const settings = {
   slidesToShow: 7,
   touchThreshold: 12,
   dots: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
   responsive: [
     {
       breakpoint: 1200,
