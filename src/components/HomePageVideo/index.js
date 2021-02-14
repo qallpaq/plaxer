@@ -3,12 +3,12 @@ import {
   Grid,
   Container,
   Typography,
-  Button
 } from '@material-ui/core'
 import ReactPlayer from 'react-player'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles'
 import useStyles from './styles/styles'
+import Btn from '../Btn'
 
 
 const HomePageVideo = () => {
@@ -38,12 +38,16 @@ const HomePageVideo = () => {
             direction and more.
           </Typography>
           <Typography className={classes.subtitle} variant='body1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
-            ed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Quis ipsum suspendisse ultrices grav
-            ida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            What I've got you've got to give it to your mama
+            What I've got you've got to give it to your pappa
+            What I've got you've got to give it to your daughter
+            You do a little dance and then you drink a little water
+            What I've got you've got to get it put it in you
+            What I've got you've got to get it put it in you
+            What I've got you've got to get it put it in you
+            Reeling with the feeling don't stop continue
           </Typography>
-          <Button>Read more</Button>
+          <Btn text='Read More'/>
         </Grid>
         <Grid item sm={12} md={5}>
           <ReactPlayer

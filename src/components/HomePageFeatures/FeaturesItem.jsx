@@ -8,15 +8,11 @@ import {
 } from '@material-ui/core'
 import useStyles from './styles/featuresItemStyles'
 import { motion } from 'framer-motion'
+import { fadeIn } from './styles/animation'
 
 
 const FeatureItem = ({name, number, img}) => {
   const classes = useStyles()
-
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  }
 
   return (
     <Grid

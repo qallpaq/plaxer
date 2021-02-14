@@ -15,14 +15,6 @@ const useStyles = makeStyles(theme => ({
   },
   name: {
     opacity: '.7',
-  },
-  icon: {
-    margin: '0 -3px',
-    color: '#fff',
-    transition: '.2s',
-    '&:hover': {
-      color: theme.palette.primary.main
-    }
   }
 }))
 

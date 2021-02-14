@@ -12,23 +12,13 @@ import gamepad from '../../assets/images/gamepad.svg'
 import useStyles from './styles/styles'
 import { useScroll } from '../../helpers'
 import { motion } from 'framer-motion'
+import { container } from './styles/animation'
 
 
 const HomePageFeatures = () => {
   const classes = useStyles()
 
   const [element, controls] = useScroll()
-
-  const container = {
-    hidden: {opacity: 0},
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
-  }
 
   return (
     <Container

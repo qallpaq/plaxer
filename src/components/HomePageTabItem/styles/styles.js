@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: '100%',
     background: '#110719',
     borderBottom: '1px solid #413b49',
     fontFamily: 'Poppins',
@@ -10,12 +11,12 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '8px',
     transition: '.2s',
     '&:hover': {
-      background: '#002357',
+      background: '#002357'
     }
   },
   item: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   versus: {
     width: '20%',
@@ -37,8 +38,8 @@ const useStyles = makeStyles(theme => ({
       width: '100%',
       textAlign: 'center',
       margin: '10px auto',
-      paddingLeft: '0',
-    },
+      paddingLeft: '0'
+    }
   },
   title: {
     fontSize: '20px',
@@ -47,11 +48,11 @@ const useStyles = makeStyles(theme => ({
     fontFamily: 'Poppins',
     cursor: 'pointer',
     [theme.breakpoints.down('sm')]: {
-      width: '100%',
+      width: '100%'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '16px',
-    },
+      fontSize: '16px'
+    }
   },
   date: {
     textTransform: 'uppercase',
@@ -59,13 +60,13 @@ const useStyles = makeStyles(theme => ({
     fontWeight: '600',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      marginBottom: '10px',
-    },
+      marginBottom: '10px'
+    }
   },
   stream: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   twitch: {
     display: 'flex',
@@ -79,7 +80,7 @@ const useStyles = makeStyles(theme => ({
     height: '20px',
     width: 'auto',
     marginRight: '5px',
-    cursor: 'pointer',
+    cursor: 'pointer'
   }
 }))
 
