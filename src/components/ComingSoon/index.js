@@ -3,8 +3,8 @@ import {
   Typography,
   Grid
 } from '@material-ui/core'
-import hellBoy from '../../assets/images/Hellboy.jpg'
-import calda from '../../assets/images/calda.jpg'
+import valorant from '../../assets/images/valorant_1-min.jpg'
+import calda from '../../assets/images/calda-min.jpg'
 import ComingItem from './ComingItem'
 import { motion } from 'framer-motion'
 import useStyles from './styles/styles'
@@ -30,7 +30,7 @@ const ComingSoon = () => {
           sm={6}
           md={12}
         >
-          <ComingItem img={hellBoy} text='Hellboy First Blood'/>
+          <ComingItem img={valorant} text='Valorant'/>
         </Grid>
         <Grid
           item

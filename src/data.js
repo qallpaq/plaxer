@@ -6,26 +6,30 @@ import golin from './assets/images/home-page-tabs/golin.png'
 import gruv from './assets/images/home-page-tabs/gruv.png'
 import s from './assets/images/home-page-tabs/s.png'
 import { CSGO, DOTA_2, FORTNITE, PUBG } from './constants'
-import one from './assets/images/footerSlider/1.jpg'
-import two from './assets/images/footerSlider/2.jpg'
-import three from './assets/images/footerSlider/3.jpg'
-import four from './assets/images/footerSlider/4.jpg'
-import five from './assets/images/footerSlider/5.jpg'
-import six from './assets/images/footerSlider/6.jpg'
-import seven from './assets/images/footerSlider/7.jpg'
-import eight from './assets/images/footerSlider/8.jpg'
-import nine from './assets/images/footerSlider/9.jpg'
-import ten from './assets/images/footerSlider/10.jpg'
-import eleven from './assets/images/footerSlider/11.jpg'
-import twelve from './assets/images/footerSlider/12.jpg'
-import thirteen from './assets/images/contentSlider/1.jpg'
-import fourteen from './assets/images/contentSlider/2.jpg'
-import fifteen from './assets/images/contentSlider/3.jpg'
-import sixteen from './assets/images/contentSlider/4.jpg'
-import seventeen from './assets/images/contentSlider/5.jpg'
-import bg from './assets/images/bg.jpg'
-import bg1 from './assets/images/bg1.jpg'
-import bg2 from './assets/images/bg2.jpg'
+
+import cs1 from './assets/images/csgo/csgo_1-min.jpg'
+import cs2 from './assets/images/csgo/csgo_2-min.jpg'
+import cs3 from './assets/images/csgo/csgo_3-min.jpg'
+import cs4 from './assets/images/csgo/csgo_4-min.jpg'
+import cs5 from './assets/images/csgo/csgo_5-min.jpg'
+
+import dota1 from './assets/images/dota/dota_1-min.jpg'
+import dota2 from './assets/images/dota/dota_2-min.jpg'
+import dota3 from './assets/images/dota/dota_3-min.jpg'
+import dota4 from './assets/images/dota/dota_4-min.jpg'
+import dota5 from './assets/images/dota/dota_5-min.jpeg'
+
+import pubg1 from './assets/images/pubg/pubg_1-min.jpg'
+import pubg2 from './assets/images/pubg/pubg_2-min.jpg'
+import pubg3 from './assets/images/pubg/pubg_3-min.jpg'
+import pubg4 from './assets/images/pubg/pubg_4-min.jpg'
+import pubg5 from './assets/images/pubg/pubg_5-min.jpg'
+
+import fortnite1 from './assets/images/fortnite/fortnite_1-min.jpg'
+import fortnite2 from './assets/images/fortnite/fortnite_2-min.jpg'
+import fortnite3 from './assets/images/fortnite/fortnite_3-min.jpg'
+import fortnite4 from './assets/images/fortnite/fortnite_4.png'
+import fortnite5 from './assets/images/fortnite/fortnite_5-min.jpg'
 
 
 const games = [
@@ -73,122 +77,122 @@ const games = [
 
 const blogTabs = [
   {
-    text: 'Streamlining the Path to Conversion',
-    img: one, date: 'April 22, 2020',
+    text: 'Tactics in CS GO',
+    img: cs1, date: 'April 22, 2020',
     title: CSGO,
     id: 1
   },
   {
-    text: 'Designing for the Web in 2019',
-    img: two, date: 'April 22, 2020',
+    text: 'I Take The Mid',
+    img: cs2, date: 'April 22, 2020',
     title: CSGO,
     id: 2
   },
   {
-    text: 'An Impactful Site  is More Than Just  Good Design.',
-    img: three, date: 'April 22, 2020',
+    text: 'Why Important to be Global?',
+    img: cs3, date: 'April 22, 2020',
     title: CSGO,
     id: 3
   },
   {
-    text: 'Driving Engagement  Online',
-    img: four, date: 'April 22, 2020',
+    text: 'How We Start',
+    img: cs4, date: 'April 26, 2020',
     title: CSGO,
     id: 4
   },
   {
-    text: 'The Art & Science of  Colors and Their  Influence on Users',
-    img: five, date: 'April 22, 2020',
-    title: DOTA_2,
+    text: 'The Art & Science of Players',
+    img: cs5, date: 'April 2, 2020',
+    title: CSGO,
     id: 5
   },
   {
-    text: 'SEO Tips for the  Contractor and  Remodeling Industry',
-    img: six, date: 'April 22, 2020',
+    text: 'Juggernaut is`s EZPZ',
+    img: dota1, date: 'May 28, 2020',
     title: DOTA_2,
     id: 6
   },
   {
     text: 'Great Web Design is  More Important than  Ever Before',
-    img: seven, date: 'April 22, 2020',
+    img: dota2, date: 'April 29, 2020',
     title: DOTA_2,
     id: 7
   },
   {
     text: 'Key Factors for  Impactful Web  Design',
-    img: eight, date: 'April 22, 2020',
+    img: dota3, date: 'April 14, 2020',
     title: DOTA_2,
     id: 8
   },
   {
-    text: 'Power',
-    img: nine, date: 'April 22, 2020',
-    title: PUBG,
+    text: 'Give it Away NOW',
+    img: dota4, date: 'April 18, 2020',
+    title: DOTA_2,
     id: 9
   },
   {
-    text: 'Radioactive',
-    img: ten, date: 'April 22, 2020',
-    title: PUBG,
+    text: 'Toxic Players after 25 Minutes',
+    img: dota5, date: 'April 19, 2020',
+    title: DOTA_2,
     id: 10
   },
   {
     text: 'Give In To Me',
-    img: eleven, date: 'April 22, 2020',
+    img: pubg1, date: 'April 3, 2020',
     title: PUBG,
     id: 11
   },
   {
     text: 'Somebody To Love',
-    img: twelve, date: 'April 22, 2020',
-    title: FORTNITE,
+    img: pubg2, date: 'April 2, 2020',
+    title: PUBG,
     id: 12
   },
   {
     text: 'Take It Out On Me',
-    img: thirteen, date: 'April 22, 2020',
-    title: FORTNITE,
+    img: pubg3, date: 'April 22, 2020',
+    title: PUBG,
     id: 13
   },
   {
     text: 'Paradise',
-    img: fourteen, date: 'April 22, 2020',
-    title: FORTNITE,
+    img: pubg4, date: 'April 23, 2020',
+    title: PUBG,
     id: 14
   },
   {
     text: 'Videotape',
-    img: fifteen, date: 'April 22, 2020',
-    title: FORTNITE,
+    img: pubg5, date: 'April 29, 2020',
+    title: PUBG,
     id: 15
   }, {
     text: 'Diamond Hard',
-    img: sixteen, date: 'April 22, 2020',
-    title: PUBG,
+    img: fortnite1, date: 'April 14, 2020',
+    title: FORTNITE,
     id: 16
   },
   {
-    text: 'Clout',
-    img: seventeen, date: 'April 22, 2020',
-    title: PUBG,
+    text: 'Play With Friends',
+    img: fortnite2, date: 'April 18, 2020',
+    title: FORTNITE,
     id: 17
   },
   {
-    text: 'Jerome',
-    img: bg, date: 'April 22, 2020',
-    title: CSGO,
+    text: 'Game 50x50',
+    img: fortnite3, date: 'April 13, 2020',
+    title: FORTNITE,
     id: 18
   },
   {
     text: 'Tokyo Snow Trip',
-    img: bg2, date: 'April 22, 2020',
-    title: DOTA_2,
+    img: fortnite4, date: 'April 7, 2020',
+    title: FORTNITE,
     id: 19
   },
   {
     text: 'Jacombo',
-    img: bg1, date: 'April 22, 2020',
-    title: DOTA_2,
+    img: fortnite5, date: 'April 2, 2020',
+    title: FORTNITE,
     id: 20
   }
 ]

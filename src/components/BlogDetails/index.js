@@ -25,11 +25,12 @@ const BlogDetails = ({match}) => {
     >
       <Grid container spacing={4}>
         <Grid item xs={12} md={8}>
-          <img
-            className={classes.img}
-            src={blog.img}
-            alt="blog"
-          />
+          <div className={classes.img} style={{
+            background: `url(${blog.img}) center`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+          </div>
           <div className={classes.supTitle}>
             <Typography className={classes.date}>
               {blog.date}

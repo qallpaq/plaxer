@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: '120px',
     paddingBottom: '30px'
@@ -9,7 +9,10 @@ const useStyles = makeStyles({
   img: {
     height: '375px',
     marginBottom: '20px',
-    width: '100%'
+    width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      height: '275px',
+    }
   },
   title: {
     fontWeight: 600,
@@ -46,6 +49,6 @@ const useStyles = makeStyles({
     fontSize: '65px',
     transform: 'rotate(180deg)'
   }
-})
+}))
 
 export default useStyles
