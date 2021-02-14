@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Grid, Typography, IconButton } from '@material-ui/core'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import { Grid, Typography } from '@material-ui/core'
 import useStyles from './styles/footerCommentsStyles'
+import Icons from '../Icons'
 
 
 const FooterAddress = () => {
@@ -21,29 +18,13 @@ const FooterAddress = () => {
       </Typography>
       <Typography className={classes.text}>
         Phone:
-        +1 (800) 456 37 11
+        +7 (800) 456 37 11
       </Typography>
       <Typography className={classes.text}>
         Email:
-        support@promo-theme.com
+        callpack96@gmail.com
       </Typography>
-      <div>
-        <IconButton onClick={e => e.preventDefault()}>
-          <Link to="#">
-            <TwitterIcon className={classes.icon}/>
-          </Link>
-        </IconButton>
-        <IconButton>
-          <Link to="#">
-            <FacebookIcon className={classes.icon}/>
-          </Link>
-        </IconButton>
-        <IconButton>
-          <Link to="#">
-            <InstagramIcon className={classes.icon}/>
-          </Link>
-        </IconButton>
-      </div>
+      <Icons/>
     </Grid>
   )
 }

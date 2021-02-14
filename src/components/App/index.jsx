@@ -2,12 +2,16 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header'
 import Footer from '../Footer'
-import { HomePage } from '../pages/'
+import { BlogPage, HomePage } from '../pages/'
+import useStyles from './styles/styles'
+import BlogDetails from '../BlogDetails'
 
 
 const App = () => {
+  const classes = useStyles()
+
   return (
-    <div className='app'>
+    <div className={classes.root}>
       <Header/>
       <Switch>
         <Route
@@ -16,9 +20,14 @@ const App = () => {
           component={HomePage}
         />
         <Route
-          path='/1'
+          path='/blog'
           exact
-          component={() => <div>1</div>}
+          component={BlogPage}
+        />
+        <Route
+          path='/blog/:id'
+          exact
+          component={BlogDetails}
         />
         <Route
           path='/2'

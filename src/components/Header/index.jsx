@@ -59,8 +59,8 @@ const Header = () => {
 
   const menuItems = [
     {link: '/', text: 'Home', icon: <HomeIcon className={classes.link}/>},
-    {link: '/1', text: 'Blog', icon: <BookIcon className={classes.link}/>},
-    {link: '/2', text: 'Gallery', icon: <PhotoSizeSelectActualIcon className={classes.link}/>},
+    {link: '/blog', text: 'Blog', icon: <BookIcon className={classes.link}/>},
+    {link: '/about', text: 'About', icon: <PhotoSizeSelectActualIcon className={classes.link}/>},
     {link: '/3', text: 'Contacts', icon: <PermContactCalendarIcon className={classes.link}/>},
     {link: '/4', text: 'About', icon: <InfoIcon className={classes.link}/>}
   ]

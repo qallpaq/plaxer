@@ -40,11 +40,11 @@ Slide.propTypes = {
 }
 
 const FooterSlider = () => {
-  const isModalActive = useSelector(state => state.root.isModalSlideActive)
+  const currentSlide = useSelector(state => state.root.currentModalSlide)
 
   return (
     <div className='footer__slider'>
-      {isModalActive ? <ModalSlide/> : ''}
+      {currentSlide ? <ModalSlide/> : ''}
       <Slider {...settings}>
         {slides.map(slide => <Slide slide={slide} key={slide}/>)}
       </Slider>

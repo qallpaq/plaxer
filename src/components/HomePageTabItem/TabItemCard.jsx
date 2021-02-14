@@ -7,10 +7,10 @@ import {
   Card
 } from '@material-ui/core'
 import PropTypes from 'prop-types'
-import useStyles from './styles/tabPanelCardStyles'
+import useStyles from './styles/tabItemCard'
 
 
-const TabPanelCard = ({name, number, img, win}) => {
+const TabItemCard = ({name, number, img, win}) => {
   const classes = useStyles()
 
   return (
@@ -51,10 +51,10 @@ const TabPanelCard = ({name, number, img, win}) => {
   )
 }
 
-TabPanelCard.propTypes = {
+TabItemCard.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
 }
 
-export default TabPanelCard
+export default TabItemCard

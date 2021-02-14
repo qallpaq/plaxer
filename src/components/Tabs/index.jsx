@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
 import {
   AppBar,
   Tabs,
   Container,
   Typography,
+  Grid
 } from '@material-ui/core'
-import { gameToJSX, tabsHeaderToJSX } from './tools'
 import {
   ALL,
   CSGO,
   DOTA_2,
   FORTNITE,
-  PUBG,
+  PUBG
 } from '../../constants'
+import { gameToJSX, tabsHeaderToJSX } from './tools'
 import useStyles from './styles/styles'
 
 
-const TabsComponent = () => {
-  const games = useSelector(state => state.root.games)
+const TabsComponent = ({Component, data, title = ''}) => {
   const classes = useStyles()
 
   const [value, setValue] = useState(0)
@@ -30,7 +29,7 @@ const TabsComponent = () => {
     <Container className={classes.root}>
       <AppBar className={classes.bar} position="static">
         <Typography className={classes.title} variant='h4'>
-          Latest matches
+          {title}
         </Typography>
         <Tabs
           value={value}
@@ -40,11 +39,13 @@ const TabsComponent = () => {
           {tabsHeaderToJSX([ALL, DOTA_2, FORTNITE, PUBG, CSGO], classes.tab)}
         </Tabs>
       </AppBar>
-      {gameToJSX(games, ALL, 0, value)}
-      {gameToJSX(games, DOTA_2, 1, value)}
-      {gameToJSX(games, FORTNITE, 2, value)}
-      {gameToJSX(games, PUBG, 3, value)}
-      {gameToJSX(games, CSGO, 4, value)}
+      <Grid container spacing={4}>
+        {gameToJSX(data, ALL, 0, value, Component)}
+        {gameToJSX(data, DOTA_2, 1, value, Component)}
+        {gameToJSX(data, FORTNITE, 2, value, Component)}
+        {gameToJSX(data, PUBG, 3, value, Component)}
+        {gameToJSX(data, CSGO, 4, value, Component)}
+      </Grid>
     </Container>
   )
 }

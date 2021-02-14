@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 import { Grid, Typography } from '@material-ui/core'
-import TabPanelCard from './TabPanelCard'
+import TabItemCard from './TabItemCard'
 import { createRandomDate } from '../../helpers'
 import twitch from '../../assets/images/twitch.svg'
-import useStyles from './styles/tabPanelStyles'
+import useStyles from './styles/styles'
 import { fadeInLeft, fadeInUp } from './styles/animation'
 
 
-const TabPanel = props => {
+const TabItem = props => {
   const {children, value, index, item, ...other} = props
   const classes = useStyles()
 
@@ -37,11 +37,11 @@ const TabPanel = props => {
             xs={12}
             md={4}
           >
-            <TabPanelCard {...item.team1}/>
+            <TabItemCard {...item.team1}/>
             <Typography className={classes.versus}>
               VS
             </Typography>
-            <TabPanelCard {...item.team2}/>
+            <TabItemCard {...item.team2}/>
           </Grid>
           <Grid item xs={12} md={6}>
             <div className={classes.text}>
@@ -74,11 +74,11 @@ const TabPanel = props => {
   )
 }
 
-TabPanel.propTypes = {
+TabItem.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
   item: PropTypes.object.isRequired
 }
 
-export default TabPanel
+export default TabItem

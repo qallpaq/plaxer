@@ -2,7 +2,9 @@ import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 
 
-const teamCreator = (name, number, img, id, win) => ({name, number, img, id, win: win})
+const teamCreator = (name, number, img, id, win) => {
+  return {name, number, img, id, win: win}
+}
 
 const createRandomDate = () => {
   const createRandomDay = () => Math.floor(Math.random() * 28) + 1
@@ -31,6 +33,7 @@ const useScroll = () => {
 
   return [element, controls]
 }
+
 
 export {
   teamCreator,

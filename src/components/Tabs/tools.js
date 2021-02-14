@@ -1,13 +1,12 @@
 import React from 'react'
-import TabPanel from './TabPanel'
 import { Tab } from '@material-ui/core'
 import { ALL } from '../../constants'
 
 
-const gameToJSX = (teams, key, index, value) => {
+const gameToJSX = (teams, key, index, value, Component) => {
   const mapTeamToProps = obj => {
     return (
-      <TabPanel
+      <Component
         index={index}
         value={value}
         key={Math.random() * 100}
@@ -26,7 +25,7 @@ const tabsHeaderToJSX = (tabsHeader, classes) => {
   const a11yProps = index => {
     return {
       id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`
     }
   }
 
