@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/plaxer/static/css/main.222da069.chunk.css",
-    "main.js": "/plaxer/static/js/main.554cf5d9.chunk.js",
-    "main.js.map": "/plaxer/static/js/main.554cf5d9.chunk.js.map",
+    "main.css": "/plaxer/static/css/main.6d342397.chunk.css",
+    "main.js": "/plaxer/static/js/main.e729d3db.chunk.js",
+    "main.js.map": "/plaxer/static/js/main.e729d3db.chunk.js.map",
     "runtime-main.js": "/plaxer/static/js/runtime-main.b95429ba.js",
     "runtime-main.js.map": "/plaxer/static/js/runtime-main.b95429ba.js.map",
     "static/css/2.32fc65d3.chunk.css": "/plaxer/static/css/2.32fc65d3.chunk.css",
-    "static/js/2.89075c76.chunk.js": "/plaxer/static/js/2.89075c76.chunk.js",
-    "static/js/2.89075c76.chunk.js.map": "/plaxer/static/js/2.89075c76.chunk.js.map",
+    "static/js/2.306c4ca9.chunk.js": "/plaxer/static/js/2.306c4ca9.chunk.js",
+    "static/js/2.306c4ca9.chunk.js.map": "/plaxer/static/js/2.306c4ca9.chunk.js.map",
     "index.html": "/plaxer/index.html",
     "static/css/2.32fc65d3.chunk.css.map": "/plaxer/static/css/2.32fc65d3.chunk.css.map",
-    "static/css/main.222da069.chunk.css.map": "/plaxer/static/css/main.222da069.chunk.css.map",
-    "static/js/2.89075c76.chunk.js.LICENSE.txt": "/plaxer/static/js/2.89075c76.chunk.js.LICENSE.txt",
+    "static/css/main.6d342397.chunk.css.map": "/plaxer/static/css/main.6d342397.chunk.css.map",
+    "static/js/2.306c4ca9.chunk.js.LICENSE.txt": "/plaxer/static/js/2.306c4ca9.chunk.js.LICENSE.txt",
     "static/media/1.2324c5c0.jpg": "/plaxer/static/media/1.2324c5c0.jpg",
     "static/media/1.ca975d9a.jpg": "/plaxer/static/media/1.ca975d9a.jpg",
     "static/media/10.de85c0b9.jpg": "/plaxer/static/media/10.de85c0b9.jpg",
@@ -29,7 +29,9 @@
     "static/media/7.b3391d02.jpg": "/plaxer/static/media/7.b3391d02.jpg",
     "static/media/8.936aa1c7.jpg": "/plaxer/static/media/8.936aa1c7.jpg",
     "static/media/9.a3f34272.jpg": "/plaxer/static/media/9.a3f34272.jpg",
+    "static/media/Hellboy.ab0a027e.jpg": "/plaxer/static/media/Hellboy.ab0a027e.jpg",
     "static/media/style.css": "/plaxer/static/media/bg2.feb49d3a.jpg",
+    "static/media/calda.530fbd38.jpg": "/plaxer/static/media/calda.530fbd38.jpg",
     "static/media/csgo.0bcc2985.svg": "/plaxer/static/media/csgo.0bcc2985.svg",
     "static/media/cup.f578c08b.svg": "/plaxer/static/media/cup.f578c08b.svg",
     "static/media/dota-2.45c2106e.svg": "/plaxer/static/media/dota-2.45c2106e.svg",
@@ -46,8 +48,8 @@
   "entrypoints": [
     "static/js/runtime-main.b95429ba.js",
     "static/css/2.32fc65d3.chunk.css",
-    "static/js/2.89075c76.chunk.js",
-    "static/css/main.222da069.chunk.css",
-    "static/js/main.554cf5d9.chunk.js"
+    "static/js/2.306c4ca9.chunk.js",
+    "static/css/main.6d342397.chunk.css",
+    "static/js/main.e729d3db.chunk.js"
   ]
 }
