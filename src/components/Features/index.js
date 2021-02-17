@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Typography,
   Grid,
   Container
 } from '@material-ui/core'
@@ -15,7 +14,7 @@ import { motion } from 'framer-motion'
 import { container } from './styles/animation'
 
 
-const HomePageFeatures = () => {
+const Features = () => {
   const classes = useStyles()
 
   const [element, controls] = useScroll()
@@ -50,21 +49,9 @@ const HomePageFeatures = () => {
           number='256+'
           name='pro teams'
         />
-        <Grid item xs={12}>
-          <Typography
-            variant='h4'
-            align='center'
-            className={classes.footer}
-          >
-            Share with
-            <span className={classes.share}>
-              #plaxer
-            </span>
-          </Typography>
-        </Grid>
       </Grid>
     </Container>
   )
 }
 
-export default HomePageFeatures
+export default Features

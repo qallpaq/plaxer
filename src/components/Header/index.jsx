@@ -2,19 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 import MenuIcon from '@material-ui/icons/Menu'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import {
-  Drawer,
   AppBar,
   Toolbar,
   CssBaseline,
   List,
-  Divider,
   IconButton,
   ListItem,
-  ListItemIcon,
-  ListItemText,
   Container,
   useMediaQuery,
   useTheme,
@@ -26,7 +20,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import BookIcon from '@material-ui/icons/Book'
 import PhotoSizeSelectActualIcon from '@material-ui/icons/PhotoSizeSelectActual'
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar'
-import InfoIcon from '@material-ui/icons/Info'
+import MobileNavBar from './Drawer'
 
 
 const Header = () => {
@@ -61,8 +55,7 @@ const Header = () => {
     {link: '/', text: 'Home', icon: <HomeIcon className={classes.link}/>},
     {link: '/blog', text: 'Blog', icon: <BookIcon className={classes.link}/>},
     {link: '/about', text: 'About', icon: <PhotoSizeSelectActualIcon className={classes.link}/>},
-    {link: '/3', text: 'Contacts', icon: <PermContactCalendarIcon className={classes.link}/>},
-    {link: '/4', text: 'About', icon: <InfoIcon className={classes.link}/>}
+    {link: '/contacts', text: 'Contacts', icon: <PermContactCalendarIcon className={classes.link}/>}
   ]
 
   return (
@@ -106,30 +99,11 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="right"
+      <MobileNavBar
         open={open}
-        classes={{paper: classes.drawerPaper}}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl'
-              ? <ChevronLeftIcon className={classes.link}/>
-              : <ChevronRightIcon className={classes.link}/>}
-          </IconButton>
-        </div>
-        <Divider/>
-        <List>
-          {menuItems.map(item => (
-            <ListItem button key={item.link}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text}/>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+        menuItems={menuItems}
+        handleDrawerClose={handleDrawerClose}
+      />
     </div>
   )
 }

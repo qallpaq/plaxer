@@ -3,22 +3,27 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    zIndex: 2,
+    zIndex: 1101,
     position: 'fixed',
-    width: '70vw',
-    height: '80vh',
-    top: '55%',
+    width: '100vw',
+    height: '100vh',
+    top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -55%)',
+    transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
+    transition: '.2s',
+    background: 'rgba(26, 14, 14, .8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       height: '70vh',
       width: '90vw'
     }
   },
   img: {
-    height: '100%',
-    width: '100%'
+    height: '90%',
+    width: '80%'
   }
 }))
 

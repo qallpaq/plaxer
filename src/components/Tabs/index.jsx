@@ -26,7 +26,7 @@ const TabsComponent = ({Component, data, title = ''}) => {
   }
 
   return (
-    <Container className={classes.root}>
+    <Container>
       <AppBar className={classes.bar} position="static">
         <Typography className={classes.title} variant='h4'>
           {title}

@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header'
+import {
+  HomePage,
+  BlogPage,
+  BlogDetailsPage,
+  AboutPage
+} from '../pages'
 import Footer from '../Footer'
-import { BlogPage, HomePage } from '../pages/'
 import useStyles from './styles/styles'
-import BlogDetails from '../BlogDetails'
+import { useSelectorContext } from '../SelectorContext'
 
 
 const App = () => {
   const classes = useStyles()
+
+  const {currentModalSlide} = useSelectorContext()
+
+  useEffect(() => {
+    document.body.style.overflowY = currentModalSlide
+      ? 'hidden'
+      : 'visible'
+  }, [currentModalSlide])
 
   return (
     <div className={classes.root}>
@@ -27,12 +40,12 @@ const App = () => {
         <Route
           path='/blog/:id'
           exact
-          component={BlogDetails}
+          component={BlogDetailsPage}
         />
         <Route
-          path='/2'
+          path='/about'
           exact
-          component={() => <div>2</div>}
+          component={AboutPage}
         />
       </Switch>
       <Footer/>

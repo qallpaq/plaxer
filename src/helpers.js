@@ -7,10 +7,14 @@ const teamCreator = (name, number, img, id, win) => {
 }
 
 const createRandomDate = () => {
-  const createRandomDay = () => Math.floor(Math.random() * 28) + 1
+  const daysCount = 28
+  const hoursCount = 11
+  const minutesCount = 59
 
-  let hours = Math.floor(Math.random() * 11)
-  let minutes = Math.floor(Math.random() * 59)
+  const createRandomDay = () => Math.floor(Math.random() * daysCount) + 1
+
+  let hours = Math.floor(Math.random() * hoursCount)
+  let minutes = Math.floor(Math.random() * minutesCount)
 
   if (String(minutes).length === 1) {
     minutes = '0' + minutes

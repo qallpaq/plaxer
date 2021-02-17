@@ -2,12 +2,6 @@ import { makeStyles } from '@material-ui/core'
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    margin: '100px auto',
-    [theme.breakpoints.down('xs')]: {
-      margin: '40px auto'
-    }
-  },
   bar: {
     background: 'transparent',
     display: 'flex',

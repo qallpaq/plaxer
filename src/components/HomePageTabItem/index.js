@@ -5,8 +5,8 @@ import { Grid, Typography } from '@material-ui/core'
 import TabItemCard from './TabItemCard'
 import { createRandomDate } from '../../helpers'
 import twitch from '../../assets/images/twitch.svg'
-import useStyles from './styles/styles'
 import { fadeInLeft, fadeInUp } from './styles/animation'
+import useStyles from './styles/styles'
 
 
 const TabItem = props => {

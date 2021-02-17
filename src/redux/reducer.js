@@ -1,11 +1,12 @@
-import { games, blogTabs } from '../data'
+import { gamesTabs, blogTabs, aboutTabs } from '../data'
 import { CHANGE_MODAL_SLIDE } from './types'
 
 
 const initialState = {
   currentModalSlide: null,
-  games: games,
-  blogTabs: blogTabs
+  gamesTabs: gamesTabs,
+  blogTabs: blogTabs,
+  aboutTabs: aboutTabs
 }
 
 const reducer = (state = initialState, action) => {

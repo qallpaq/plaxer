@@ -2,18 +2,17 @@ import { makeStyles } from '@material-ui/core'
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: '120px',
-    paddingBottom: '30px'
-  },
-  img: {
+  img: props => ({
     height: '375px',
     marginBottom: '20px',
     width: '100%',
+    background: `url(${props.img}) center`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('xs')]: {
-      height: '275px',
+      height: '275px'
     }
-  },
+  }),
   title: {
     fontWeight: 600,
     fontSize: '36px',

@@ -8,28 +8,33 @@ import { settings, slides } from './tools'
 import { changeModalSlide } from '../../redux/actions'
 import ModalSlide from './ModalSlide'
 import './styles/style.css'
+import Share from '../Share'
 
 
 const Slide = ({slide}) => {
   const dispatch = useDispatch()
-  const changeModal = payload => {
-    dispatch(changeModalSlide(payload))
+
+  let mouseX
+
+  const mouseDownHandler = e => {
+    mouseX = e.clientX
+  }
+
+  const mouseUpHandler = e => {
+    if (mouseX === e.clientX) {
+      dispatch(changeModalSlide(slide))
+    }
   }
 
   return (
     <div className='footer__slider-item'>
-      <span
-        className='slider__item-context'
-        onDoubleClick={() => changeModal(slide)}
-      >
-        double click
-      </span>
       <img
         className='slider__item-img'
         key={slide}
         src={slide}
         alt="slide"
-        onDoubleClick={() => changeModal(slide)}
+        onMouseDown={mouseDownHandler}
+        onMouseUp={mouseUpHandler}
       />
     </div>
   )
@@ -40,11 +45,12 @@ Slide.propTypes = {
 }
 
 const FooterSlider = () => {
-  const currentSlide = useSelector(state => state.root.currentModalSlide)
+  const currentSlide = useSelector(({root}) => root.currentModalSlide)
 
   return (
     <div className='footer__slider'>
-      {currentSlide ? <ModalSlide/> : ''}
+      <Share/>
+      {currentSlide && <ModalSlide/>}
       <Slider {...settings}>
         {slides.map(slide => <Slide slide={slide} key={slide}/>)}
       </Slider>
