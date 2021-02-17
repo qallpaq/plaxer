@@ -1,5 +1,6 @@
 .home-page__content__slider .slick-slider {
 	height: 340px;
+	margin-bottom: 50px;
 }
 
 .slider-img-wrapper {
@@ -19,14 +20,6 @@
 	top: 20px;
 	height: 55px;
 	width: 55px;
-}
-
-.slider-svg-wrapper img {
-	height: 100%;
-}
-
-.slider-img-wrapper img {
-	height: 100%;
 }
 
 .content-slider-item {

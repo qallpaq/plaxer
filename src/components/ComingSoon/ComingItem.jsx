@@ -5,7 +5,7 @@ import {
   Button
 } from '@material-ui/core'
 import Icons from '../Icons'
-import useStyles from './styles/comingItem'
+import useStyles from './styles/comingItemStyles'
 
 
 const ComingItem = ({img, text}) => {
@@ -16,7 +16,7 @@ const ComingItem = ({img, text}) => {
       <img
         className={classes.img}
         src={img}
-        alt="Hellboy"
+        alt="game"
       />
       <Typography
         className={classes.title}

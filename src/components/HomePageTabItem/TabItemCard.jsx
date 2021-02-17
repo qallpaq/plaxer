@@ -7,7 +7,7 @@ import {
   Card
 } from '@material-ui/core'
 import PropTypes from 'prop-types'
-import useStyles from './styles/tabItemCard'
+import useStyles from './styles/tabItemCardStyles'
 
 
 const TabItemCard = ({name, number, img, win}) => {

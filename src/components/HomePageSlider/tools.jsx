@@ -51,7 +51,6 @@ const createDots = dots => {
 }
 
 const settings = {
-  lazyLoad: 'ondemand',
   dots: true,
   swipe: false,
   infinite: true,

@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { IconButton } from '@material-ui/core'
+import { IconButton, makeStyles } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import { makeStyles } from '@material-ui/core'
 
 
 const useStyles = makeStyles(theme => ({
@@ -18,25 +16,25 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Icons = () => {
+const Icons = ({flexDirection = 'row'}) => {
   const classes = useStyles()
 
   return (
-    <div>
-      <IconButton onClick={e => e.preventDefault()}>
-        <Link to="#">
+    <div style={{flexDirection: flexDirection}}>
+      <IconButton>
+        <a href="https://twitter.com/?lang=ru" target='_blank'>
           <TwitterIcon className={classes.icon}/>
-        </Link>
+        </a>
       </IconButton>
       <IconButton>
-        <Link to="#">
+        <a href="https://ru-ru.facebook.com/" target='_blank'>
           <FacebookIcon className={classes.icon}/>
-        </Link>
+        </a>
       </IconButton>
       <IconButton>
-        <Link to="#">
+        <a href="https://www.instagram.com/?hl=ru" target='_blank'>
           <InstagramIcon className={classes.icon}/>
-        </Link>
+        </a>
       </IconButton>
     </div>
   )

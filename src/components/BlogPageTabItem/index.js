@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router'
+import { PropTypes } from 'prop-types'
 import {
   Grid,
   Typography
@@ -44,6 +45,12 @@ const TabItem = ({item, value, index, history}) => {
       </div>
     </Grid>
   )
+}
+
+TabItem.propTypes = {
+  item: PropTypes.object,
+  value: PropTypes.number,
+  index: PropTypes.number
 }
 
 export default withRouter(TabItem)

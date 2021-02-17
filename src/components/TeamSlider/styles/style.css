@@ -1,0 +1,44 @@
+.team-slider .slick-slider.slick-initialized {
+	height: 420px;
+	margin: 100px auto;
+}
+
+.team-slider__item {
+	height: 420px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.team-slider__img {
+	position: relative;
+	height: 330px !important;
+}
+
+.team-slider__inner {
+	font-weight: 700;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(90deg, rgba(84, 18, 148, .7) 3%, rgba(50, 84, 164, .7) 27%, rgba(34, 28, 134, .7) 100%);
+}
+
+.team-slider__img:hover .team-slider__inner {
+	opacity: 1;
+}
+
+.team-slider__text {
+	padding: 10px;
+}
+
+.MuiTypography-root.team-slider__name.MuiTypography-body1 {
+	text-transform: uppercase;
+	font-weight: 700;
+}

@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import PropTypes from 'prop-types'
 import { Typography } from '@material-ui/core'
 import { isDota, items, settings } from './tools'
-import './styles/sltyes.css'
+import './styles/style.css'
 
 
 const SubtitleLeftItem = ({upper, down}) => (
@@ -25,7 +25,7 @@ const SubtitleLeftItem = ({upper, down}) => (
 
 SubtitleLeftItem.propTypes = {
   upper: PropTypes.string,
-  down: PropTypes.string,
+  down: PropTypes.string
 }
 
 const HomePageContentSlider = () => (
@@ -37,7 +37,12 @@ const HomePageContentSlider = () => (
             <img src={slide.svg} alt="slide-logo"/>
           </div>
           <div className="slider-img-wrapper">
-            <img src={slide.img} alt="slide"/>
+            <div style={{
+              background: `url(${slide.img}) center`,
+              backgroundSize: 'cover',
+              height: '100%'
+            }}
+            />
             <div className="content-slider-title">
               eSport League CSGO Division
             </div>

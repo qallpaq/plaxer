@@ -7,24 +7,25 @@ import useStyles from './styles/modalSlideStyles'
 
 
 const ModalSlide = () => {
-  const currentSlide = useSelector(state => state.root.currentModalSlide)
+  const currentSlide = useSelector(({root}) => root.currentModalSlide)
 
   const classes = useStyles()
 
   const dispatch = useDispatch()
-  const changeModal = payload => {
-    dispatch(changeModalSlide(payload))
+
+  const offModal = () => {
+    dispatch(changeModalSlide(null))
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={offModal}>
       <motion.img
+        className={classes.img}
         variants={fadeIn}
         initial='hidden'
         animate='visible'
-        className={classes.img}
         src={currentSlide}
-        onClick={() => changeModal(null)}
+        onClick={offModal}
         alt="slide"/>
     </div>
   )

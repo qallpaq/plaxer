@@ -16,7 +16,7 @@ import cs5 from './assets/images/csgo/csgo_5-min.jpg'
 import dota1 from './assets/images/dota/dota_1-min.jpg'
 import dota2 from './assets/images/dota/dota_2-min.jpg'
 import dota3 from './assets/images/dota/dota_3-min.jpg'
-import dota4 from './assets/images/dota/dota_4-min.jpg'
+import dota4 from './assets/images/dota/dota_4.png'
 import dota5 from './assets/images/dota/dota_5-min.jpeg'
 
 import pubg1 from './assets/images/pubg/pubg_1-min.jpg'
@@ -31,8 +31,17 @@ import fortnite3 from './assets/images/fortnite/fortnite_3-min.jpg'
 import fortnite4 from './assets/images/fortnite/fortnite_4.png'
 import fortnite5 from './assets/images/fortnite/fortnite_5-min.jpg'
 
+import csgoStream1 from '../src/assets/images/csgo/stream_1.jpg'
+import csgoStream2 from '../src/assets/images/csgo/stream_2.jpg'
+import dotaStream1 from '../src/assets/images/dota/stream_1.png'
+import dotaStream2 from '../src/assets/images/dota/stream_2.jpg'
+import fortniteStream1 from '../src/assets/images/fortnite/stream_1.png'
+import fortniteStream2 from '../src/assets/images/fortnite/stream_2.jpg'
+import pubgStream1 from '../src/assets/images/pubg/stream_1.jpg'
+import pubgStream2 from '../src/assets/images/pubg/stream_2.png'
 
-const games = [
+
+const gamesTabs = [
   {
     team1: teamCreator('dragons', 193, dragons, 1, true),
     team2: teamCreator('gdev', 124, gdev, 2, false),
@@ -77,36 +86,6 @@ const games = [
 
 const blogTabs = [
   {
-    text: 'Tactics in CS GO',
-    img: cs1, date: 'April 22, 2020',
-    title: CSGO,
-    id: 1
-  },
-  {
-    text: 'I Take The Mid',
-    img: cs2, date: 'April 22, 2020',
-    title: CSGO,
-    id: 2
-  },
-  {
-    text: 'Why Important to be Global?',
-    img: cs3, date: 'April 22, 2020',
-    title: CSGO,
-    id: 3
-  },
-  {
-    text: 'How We Start',
-    img: cs4, date: 'April 26, 2020',
-    title: CSGO,
-    id: 4
-  },
-  {
-    text: 'The Art & Science of Players',
-    img: cs5, date: 'April 2, 2020',
-    title: CSGO,
-    id: 5
-  },
-  {
     text: 'Juggernaut is`s EZPZ',
     img: dota1, date: 'May 28, 2020',
     title: DOTA_2,
@@ -125,7 +104,7 @@ const blogTabs = [
     id: 8
   },
   {
-    text: 'Give it Away NOW',
+    text: 'Best peek in 2k21',
     img: dota4, date: 'April 18, 2020',
     title: DOTA_2,
     id: 9
@@ -194,7 +173,88 @@ const blogTabs = [
     img: fortnite5, date: 'April 2, 2020',
     title: FORTNITE,
     id: 20
+  },
+  {
+    text: 'Tactics in CS GO',
+    img: cs1, date: 'April 22, 2020',
+    title: CSGO,
+    id: 1
+  },
+  {
+    text: 'I Take The Mid',
+    img: cs2, date: 'April 22, 2020',
+    title: CSGO,
+    id: 2
+  },
+  {
+    text: 'Why Important to be Global?',
+    img: cs3, date: 'April 22, 2020',
+    title: CSGO,
+    id: 3
+  },
+  {
+    text: 'How We Start',
+    img: cs4, date: 'April 26, 2020',
+    title: CSGO,
+    id: 4
+  },
+  {
+    text: 'The Art & Science of Players',
+    img: cs5, date: 'April 2, 2020',
+    title: CSGO,
+    id: 5
   }
 ]
 
-export { games, blogTabs }
+const aboutTabs = [
+  {
+    img: dotaStream1,
+    date: 'May 28, 2020',
+    title: DOTA_2,
+    id: 6
+  },
+  {
+    img: dotaStream2,
+    date: 'April 29, 2020',
+    title: DOTA_2,
+    id: 7
+  },
+  {
+    img: pubgStream1,
+    date: 'April 3, 2020',
+    title: PUBG,
+    id: 11
+  },
+  {
+    img: pubgStream2,
+    date: 'April 2, 2020',
+    title: PUBG,
+    id: 12
+  },
+  {
+    img: fortniteStream1,
+    date: 'April 14, 2020',
+    title: FORTNITE,
+    id: 16
+  },
+  {
+    img: fortniteStream2,
+    date: 'April 18, 2020',
+    title: FORTNITE,
+    id: 17
+  },
+  {
+    img: csgoStream1,
+    date: 'April 22, 2020',
+    title: CSGO,
+    id: 1
+  },
+  {
+    img: csgoStream2,
+    date: 'April 15, 2020',
+    title: CSGO,
+    id: 2
+  }
+]
+
+export { gamesTabs, blogTabs, aboutTabs }

@@ -18,7 +18,6 @@ const items = [
 ]
 
 const settings = {
-  lazyLoad: 'ondemand',
   infinite: true,
   swipeToSlide: true,
   slidesToShow: 4,
