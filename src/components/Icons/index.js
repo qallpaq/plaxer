@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { IconButton, makeStyles } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -38,6 +39,10 @@ const Icons = ({flexDirection = 'row'}) => {
       </IconButton>
     </div>
   )
+}
+
+Icons.propTypes = {
+  flexDirection: PropTypes.string
 }
 
 export default Icons

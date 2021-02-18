@@ -47,6 +47,10 @@ const useStyles = makeStyles(theme => ({
     right: 0,
     fontSize: '65px',
     transform: 'rotate(180deg)'
+  },
+  formTitle: {
+    margin: '20px auto',
+    fontSize: '34px'
   }
 }))
 

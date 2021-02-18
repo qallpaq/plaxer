@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Typography } from '@material-ui/core'
 import { motion } from 'framer-motion'
 import twitch from '../../assets/images/twitch.svg'
@@ -65,6 +66,12 @@ const TabItem = ({value, index, item}) => {
       </Grid>
     </motion.div>
   )
+}
+
+TabItem.propTypes = {
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+  item: PropTypes.object.isRequired
 }
 
 export default TabItem

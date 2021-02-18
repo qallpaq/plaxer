@@ -7,8 +7,8 @@ import valorant from '../../assets/images/valorant_1-min.jpg'
 import calda from '../../assets/images/calda-min.jpg'
 import ComingItem from './ComingItem'
 import { motion } from 'framer-motion'
-import useStyles from './styles/styles'
 import { slideInRight } from './styles/animtaion'
+import useStyles from './styles/styles'
 
 
 const ComingSoon = () => {
@@ -24,21 +24,19 @@ const ComingSoon = () => {
         Coming soon
       </Typography>
       <Grid container spacing={3}>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          md={12}
-        >
-          <ComingItem img={valorant} text='Valorant'/>
+        <Grid item xs={12} sm={6} md={12}>
+          <ComingItem
+            img={valorant}
+            text='Valorant'
+            userMail='game1'
+          />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          md={12}
-        >
-          <ComingItem img={calda} text='Call of Duty 17'/>
+        <Grid item xs={12} sm={6} md={12}>
+          <ComingItem
+            img={calda}
+            text='Call of Duty 17'
+            userMail='game2'
+          />
         </Grid>
       </Grid>
     </motion.div>

@@ -1,26 +1,54 @@
 import React from 'react'
-import { Grid, Typography, Container } from '@material-ui/core'
+import {
+  Grid,
+  Typography,
+  Container,
+  useTheme,
+  useMediaQuery
+} from '@material-ui/core'
+import { useDispatch } from 'react-redux'
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote'
 import { motion } from 'framer-motion'
 import ComingSoon from '../ComingSoon'
-import useStyles from './styles/blogDetailsPageStyles'
 import { sliderInLeft } from './styles/animation'
-import Content from '../Content'
+import Page from '../Page'
 import { useSelectorContext } from '../SelectorContext'
+import useStyles from './styles/blogDetailsPageStyles'
+import ContactForm from '../ContactForm'
+import Comments from '../Comments'
+import { addComment } from '../../redux/actions'
 
 
 const BlogDetailsPage = ({match}) => {
   const id = match.params.id
 
   const {blogTabs} = useSelectorContext()
+
   const blog = blogTabs.find(item => item.id === +id)
 
   const {img, date, title, text} = blog
 
   const classes = useStyles({img})
 
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
+  const dispatch = useDispatch()
+
+  const onSubmit = (values, onSubmitProps) => {
+
+    const comment = {
+      name: values.blogDetailsName,
+      date: new Date().toLocaleDateString(),
+      text: values.blogDetailsText
+    }
+
+    dispatch(addComment(comment))
+    onSubmitProps.resetForm()
+  }
+
   return (
-    <Content>
+    <Page page='Blog'>
       <Container
         component={motion.div}
         variants={sliderInLeft}
@@ -29,8 +57,7 @@ const BlogDetailsPage = ({match}) => {
       >
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
-            <div className={classes.img}>
-            </div>
+            <div className={classes.img}/>
             <div className={classes.supTitle}>
               <Typography className={classes.date}>
                 {date}
@@ -71,8 +98,17 @@ const BlogDetailsPage = ({match}) => {
             <ComingSoon/>
           </Grid>
         </Grid>
+        <Typography className={classes.formTitle}>Leave a Comment</Typography>
+        <ContactForm
+          field1='blogDetailsName'
+          field2='blogDetailsEmail'
+          field3='blogDetailsText'
+          onSubmit={onSubmit}
+          styles={{width: `${isMobile ? '100%' : '65%'}`}}
+        />
+        <Comments/>
       </Container>
-    </Content>
+    </Page>
   )
 }
 

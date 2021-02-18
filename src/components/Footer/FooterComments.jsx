@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Typography } from '@material-ui/core'
 import useStyles from './styles/footerCommentsStyles'
 
@@ -13,6 +14,11 @@ const CommentsItem = ({author, text}) => {
       </span> - {text}
     </Typography>
   )
+}
+
+CommentsItem.propTypes = {
+  author: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 }
 
 const FooterComments = () => {

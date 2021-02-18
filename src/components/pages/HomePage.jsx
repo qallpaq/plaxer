@@ -8,7 +8,7 @@ import HomePageParallax from '../HomePageParallax'
 import Features from '../Features'
 import FooterSlider from '../FooterSlider'
 import TabItem from '../HomePageTabItem'
-import Content from '../Content'
+import Page from '../Page'
 import { useSelectorContext } from '../SelectorContext'
 
 
@@ -16,7 +16,7 @@ const HomePage = () => {
   const {gamesTabs} = useSelectorContext()
 
   return (
-    <Content styled={false}>
+    <Page styled={false} page='Home'>
       <HomePageSlider/>
       <HomePageCards/>
       <HomePageVideo/>
@@ -28,7 +28,7 @@ const HomePage = () => {
       <HomePageParallax/>
       <Features/>
       <FooterSlider/>
-    </Content>
+    </Page>
   )
 }
 

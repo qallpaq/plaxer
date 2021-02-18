@@ -1,14 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
-  Typography,
-  TextField,
-  Button
+  Typography
 } from '@material-ui/core'
 import Icons from '../Icons'
 import useStyles from './styles/comingItemStyles'
+import EmailForm from '../EmailForm'
 
 
-const ComingItem = ({img, text}) => {
+const ComingItem = ({img, text, userMail}) => {
   const classes = useStyles()
 
   return (
@@ -24,22 +24,16 @@ const ComingItem = ({img, text}) => {
       >
         {text}
       </Typography>
-      <form
-        className={classes.form}
-        noValidate
-        autoComplete="off"
-      >
-        <TextField
-          label="Your email"
-          InputProps={{className: classes.input}}
-        />
-        <Button>
-          Subscribe
-        </Button>
-      </form>
+      <EmailForm userMail={userMail} alertMessage='Your subscribed now'/>
       <Icons/>
     </div>
   )
+}
+
+ComingItem.propTypes = {
+  text: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  userMail: PropTypes.string.isRequired,
 }
 
 export default ComingItem

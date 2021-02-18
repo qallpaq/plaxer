@@ -2,7 +2,7 @@ import React from 'react'
 import AboutPageTitle from '../AboutPageTitle'
 import Features from '../Features'
 import FooterSlider from '../FooterSlider'
-import Content from '../Content'
+import Page from '../Page'
 import TabsComponent from '../Tabs'
 import TabItem from '../AboutPageTabItem'
 import { useSelectorContext } from '../SelectorContext'
@@ -13,7 +13,7 @@ const AboutPage = () => {
   const {aboutTabs} = useSelectorContext()
 
   return (
-    <Content>
+    <Page page='About'>
       <AboutPageTitle/>
       <Features/>
       <TeamSlider/>
@@ -23,7 +23,7 @@ const AboutPage = () => {
         title='Best moments'
       />
       <FooterSlider/>
-    </Content>
+    </Page>
   )
 }
 
