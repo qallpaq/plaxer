@@ -13,7 +13,10 @@ const SelectorContextProvider = ({children}) => {
     aboutTabs: useSelector(({root}) => root.aboutTabs),
     blogTabs: useSelector(({root}) => root.blogTabs),
     gamesTabs: useSelector(({root}) => root.gamesTabs),
-    currentModalSlide: useSelector(({root}) => root.currentModalSlide)
+    currentModalSlide: useSelector(({root}) => root.currentModalSlide),
+    currentPage: useSelector(({root}) => root.currentPage),
+    comments: useSelector(({root}) => root.comments),
+    alert: useSelector(({root}) => root.alert)
   }
 
   return (

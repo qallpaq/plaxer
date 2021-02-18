@@ -12,14 +12,6 @@ const useStyles = makeStyles({
   title: {
     fontWeight: 700,
     fontFamily: 'Poppins, sans-serif'
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  input: {
-    marginBottom: '10px',
-    color: '#fff'
   }
 })
 

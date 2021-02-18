@@ -5,7 +5,8 @@ import {
   HomePage,
   BlogPage,
   BlogDetailsPage,
-  AboutPage
+  AboutPage,
+  ContactsPage
 } from '../pages'
 import Footer from '../Footer'
 import useStyles from './styles/styles'
@@ -46,6 +47,11 @@ const App = () => {
           path='/about'
           exact
           component={AboutPage}
+        />
+        <Route
+          path='/contacts'
+          exact
+          component={ContactsPage}
         />
       </Switch>
       <Footer/>

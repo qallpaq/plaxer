@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import {
@@ -47,6 +48,12 @@ const MobileNavBar = ({open, menuItems, handleDrawerClose}) => {
       </List>
     </Drawer>
   )
+}
+
+MobileNavBar.propTypes = {
+  open: PropTypes.bool.isRequired,
+  menuItems: PropTypes.array.isRequired,
+  handleDrawerClose: PropTypes.func.isRequired
 }
 
 export default MobileNavBar

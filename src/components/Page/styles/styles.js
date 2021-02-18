@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     margin: '160px auto 80px',
     width: '100%',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       margin: '100px auto 50px'
     }
   },

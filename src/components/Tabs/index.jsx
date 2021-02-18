@@ -4,7 +4,8 @@ import {
   Tabs,
   Container,
   Typography,
-  Grid
+  Grid,
+  Tab
 } from '@material-ui/core'
 import {
   ALL,
@@ -13,9 +14,46 @@ import {
   FORTNITE,
   PUBG
 } from '../../constants'
-import { gameToJSX, tabsHeaderToJSX } from './tools'
 import useStyles from './styles/styles'
 
+
+const gameToJSX = (teams, key, index, value, Component) => {
+  const mapTeamToProps = obj => {
+    return (
+      <Component
+        index={index}
+        value={value}
+        key={Math.random() * 100}
+        item={obj}
+      />
+    )
+  }
+
+  return key === ALL
+    ? teams.map(mapTeamToProps)
+    : teams.filter(item => item.title === key)
+      .map(mapTeamToProps)
+}
+
+const tabsHeaderToJSX = (tabsHeader, classes) => {
+  const a11yProps = index => {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`
+    }
+  }
+
+  return tabsHeader.map((item, index) => {
+    return (
+      <Tab
+        className={classes}
+        label={item}
+        key={Math.random() * 100}
+        {...a11yProps(index)}
+      />
+    )
+  })
+}
 
 const TabsComponent = ({Component, data, title = ''}) => {
   const classes = useStyles()

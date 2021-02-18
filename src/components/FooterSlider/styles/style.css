@@ -12,18 +12,13 @@
 	height: 100%;
 }
 
-.slider__item-img {
-	height: 100%;
-	padding: 2px;
-	cursor: pointer;
-}
-
 .footer__slider .slick-arrow {
 	display: none !important;
 }
 
 .footer__slider-item {
 	position: relative;
+	padding: 2px;
 }
 
 .footer__slider-item:hover .slider__item-context {

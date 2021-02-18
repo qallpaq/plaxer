@@ -3,7 +3,7 @@ import TabsComponent from '../Tabs'
 import TabItem from '../BlogPageTabItem'
 import { motion } from 'framer-motion'
 import { container } from '../BlogPageTabItem/styles/animation'
-import Content from '../Content'
+import Page from '../Page'
 import { useSelectorContext } from '../SelectorContext'
 
 
@@ -11,7 +11,7 @@ const BlogPage = () => {
   const {blogTabs} = useSelectorContext()
 
   return (
-    <Content>
+    <Page page='Blog'>
       <motion.div
         variants={container}
         initial='hidden'
@@ -19,7 +19,7 @@ const BlogPage = () => {
       >
         <TabsComponent Component={TabItem} data={blogTabs}/>
       </motion.div>
-    </Content>
+    </Page>
   )
 }
 

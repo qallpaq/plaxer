@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Typography } from '@material-ui/core'
 import useStyles from './styles/footerCommentsStyles'
 
@@ -15,6 +16,11 @@ const PostsItem = ({text, date}) => {
       {date}
     </Typography>
   )
+}
+
+PostsItem.propTypes = {
+  text: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired
 }
 
 const FooterPosts = () => {

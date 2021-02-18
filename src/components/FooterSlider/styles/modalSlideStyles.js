@@ -15,16 +15,18 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(26, 14, 14, .8)',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      height: '70vh',
-      width: '90vw'
-    }
+    alignItems: 'center'
   },
-  img: {
+  img: props => ({
+    background: `url(${props.currentModalSlide}) 50% 50%`,
+    backgroundSize: 'cover',
     height: '90%',
-    width: '80%'
-  }
+    width: '80%',
+    [theme.breakpoints.down('xs')]: {
+      height: '70vh',
+      width: '96vw'
+    }
+  })
 }))
 
 export default useStyles

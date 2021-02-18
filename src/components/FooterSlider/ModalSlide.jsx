@@ -1,17 +1,17 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { changeModalSlide } from '../../redux/actions'
 import { fadeIn } from './styles/animation'
 import { motion } from 'framer-motion'
 import useStyles from './styles/modalSlideStyles'
+import { useSelectorContext } from '../SelectorContext'
 
 
 const ModalSlide = () => {
-  const currentSlide = useSelector(({root}) => root.currentModalSlide)
-
-  const classes = useStyles()
-
+  const {currentModalSlide} = useSelectorContext()
   const dispatch = useDispatch()
+
+  const classes = useStyles({currentModalSlide})
 
   const offModal = () => {
     dispatch(changeModalSlide(null))
@@ -19,12 +19,12 @@ const ModalSlide = () => {
 
   return (
     <div className={classes.root} onClick={offModal}>
-      <motion.img
+      <motion.div
         className={classes.img}
         variants={fadeIn}
         initial='hidden'
         animate='visible'
-        src={currentSlide}
+        src={currentModalSlide}
         onClick={offModal}
         alt="slide"/>
     </div>
