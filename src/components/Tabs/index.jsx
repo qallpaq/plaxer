@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import {
   AppBar,
   Tabs,
@@ -86,6 +87,12 @@ const TabsComponent = ({Component, data, title = ''}) => {
       </Grid>
     </Container>
   )
+}
+
+TabsComponent.propTypes = {
+  Component: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired,
+  title: PropTypes.string,
 }
 
 export default TabsComponent

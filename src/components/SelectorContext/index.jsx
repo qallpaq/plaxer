@@ -15,7 +15,8 @@ const SelectorContextProvider = ({children}) => {
     gamesTabs: useSelector(({root}) => root.gamesTabs),
     currentModalSlide: useSelector(({root}) => root.currentModalSlide),
     currentPage: useSelector(({root}) => root.currentPage),
-    comments: useSelector(({root}) => root.comments),
+    blogComments: useSelector(({root}) => root.blogComments),
+    matchComments: useSelector(({root}) => root.matchComments),
     alert: useSelector(({root}) => root.alert)
   }
 

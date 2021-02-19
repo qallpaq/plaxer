@@ -24,7 +24,7 @@ const ComingItem = ({img, text, userMail}) => {
       >
         {text}
       </Typography>
-      <EmailForm userMail={userMail} alertMessage='Your subscribed now'/>
+      <EmailForm userMail={userMail} alertMessage='You subscribed now'/>
       <Icons/>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { makeStyles, Typography } from '@material-ui/core'
 
 
@@ -28,6 +29,11 @@ const ContactItem = ({title, subtitle}) => {
       </Typography>
     </div>
   )
+}
+
+ContactItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired
 }
 
 const ContactPageInfo = () => {

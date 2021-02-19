@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
@@ -16,17 +16,18 @@ import five from '../../assets/images/footerSlider/5.jpg'
 import six from '../../assets/images/footerSlider/6.jpg'
 import seven from '../../assets/images/footerSlider/7.jpg'
 import eight from '../../assets/images/footerSlider/8.jpg'
-import nine from '../../assets/images/footerSlider/9.jpg'
+import nine from '../../assets/images/footerSlider/9.png'
 import ten from '../../assets/images/footerSlider/10.jpg'
 import eleven from '../../assets/images/footerSlider/11.jpg'
 import twelve from '../../assets/images/footerSlider/12.jpg'
+import thirteen from '../../assets/images/footerSlider/13.jpg'
 import bg from '../../assets/images/bg.jpg'
 import bg1 from '../../assets/images/bg1.jpg'
 import bg2 from '../../assets/images/bg2.jpg'
 import { useSelectorContext } from '../SelectorContext'
 
 
-const Slide = ({slide}) => {
+const Slide = memo(({slide}) => {
   const dispatch = useDispatch()
 
   let mouseX
@@ -55,22 +56,24 @@ const Slide = ({slide}) => {
       />
     </div>
   )
-}
+})
 
 Slide.propTypes = {
   slide: PropTypes.string.isRequired
 }
 
-const FooterSlider = () => {
+const FooterSlider = memo(() => {
   const slides = [
     one, two, three,
     four, five, six,
     seven, eight, nine,
     ten, eleven, twelve,
+    thirteen,
     bg, bg1, bg2
   ]
 
   const settings = {
+    lazyLoad: 'ondemand',
     infinite: true,
     swipeToSlide: true,
     slidesToShow: 7,
@@ -111,6 +114,6 @@ const FooterSlider = () => {
       </Slider>
     </div>
   )
-}
+})
 
 export default FooterSlider

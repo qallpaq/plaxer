@@ -16,14 +16,13 @@ import { useSelectorContext } from '../SelectorContext'
 import useStyles from './styles/blogDetailsPageStyles'
 import ContactForm from '../ContactForm'
 import Comments from '../Comments'
-import { addComment } from '../../redux/actions'
+import { addBlogComment } from '../../redux/actions'
 
 
 const BlogDetailsPage = ({match}) => {
   const id = match.params.id
-
   const {blogTabs} = useSelectorContext()
-
+  const {blogComments} = useSelectorContext()
   const blog = blogTabs.find(item => item.id === +id)
 
   const {img, date, title, text} = blog
@@ -36,14 +35,13 @@ const BlogDetailsPage = ({match}) => {
   const dispatch = useDispatch()
 
   const onSubmit = (values, onSubmitProps) => {
-
     const comment = {
       name: values.blogDetailsName,
       date: new Date().toLocaleDateString(),
       text: values.blogDetailsText
     }
 
-    dispatch(addComment(comment))
+    dispatch(addBlogComment(comment))
     onSubmitProps.resetForm()
   }
 
@@ -106,7 +104,7 @@ const BlogDetailsPage = ({match}) => {
           onSubmit={onSubmit}
           styles={{width: `${isMobile ? '100%' : '65%'}`}}
         />
-        <Comments/>
+        <Comments comments={blogComments}/>
       </Container>
     </Page>
   )

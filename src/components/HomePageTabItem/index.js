@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 import { Grid, Typography } from '@material-ui/core'
@@ -10,8 +11,10 @@ import useStyles from './styles/styles'
 
 
 const TabItem = props => {
-  const {children, value, index, item, ...other} = props
+  const {children, value, index, item, history, ...other} = props
   const classes = useStyles()
+
+  const setURL = () => history.push(`./match/${item.id}`)
 
   return (
     <motion.div
@@ -32,6 +35,7 @@ const TabItem = props => {
           variants={fadeInUp}
         >
           <Grid
+            onClick={setURL}
             className={classes.item}
             item
             xs={12}
@@ -45,7 +49,7 @@ const TabItem = props => {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className={classes.text}>
-              <Typography className={classes.title}>
+              <Typography className={classes.title} onClick={setURL}>
                 eSport League - {item.title} Division
               </Typography>
               <Typography className={classes.date}>
@@ -81,4 +85,4 @@ TabItem.propTypes = {
   item: PropTypes.object.isRequired
 }
 
-export default TabItem
+export default withRouter(TabItem)

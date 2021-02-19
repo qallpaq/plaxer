@@ -38,7 +38,7 @@ const MobileNavBar = ({open, menuItems, handleDrawerClose}) => {
       <Divider/>
       <List>
         {menuItems.map(item => (
-          <ListItem button key={item.link}>
+          <ListItem button key={item.link} onClick={handleDrawerClose}>
             <NavLink className={classes.mobileLink} to={item.link}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text}/>

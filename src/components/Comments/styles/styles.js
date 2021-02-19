@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '50px',
     width: '65%',
     [theme.breakpoints.down('sm')]: {
-      width: '100%',
+      width: '100%'
     }
   },
   item: {
@@ -19,13 +19,14 @@ const useStyles = makeStyles(theme => ({
     height: '100px',
     fontSize: '35px',
     [theme.breakpoints.down('xs')]: {
-      width: '70px',
-      height: '70px',
-      fontSize: '25px',
+      display: 'none'
     }
   },
   content: {
-    marginLeft: '20px'
+    marginLeft: '20px',
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '0'
+    }
   },
   title: {
     display: 'flex'

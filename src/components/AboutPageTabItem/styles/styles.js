@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: '100px',
+    minHeight: '240px',
     width: '100%',
     background: '#110719',
     borderBottom: '1px solid #413b49',

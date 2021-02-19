@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header'
 import {
@@ -11,6 +12,8 @@ import {
 import Footer from '../Footer'
 import useStyles from './styles/styles'
 import { useSelectorContext } from '../SelectorContext'
+import { changeModalSlide } from '../../redux/actions'
+import Match from '../Match'
 
 
 const App = () => {
@@ -18,10 +21,14 @@ const App = () => {
 
   const {currentModalSlide} = useSelectorContext()
 
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    document.body.style.overflowY = currentModalSlide
-      ? 'hidden'
-      : 'visible'
+    if (currentModalSlide) {
+      document.body.onscroll = () => {
+        dispatch(changeModalSlide(null))
+      }
+    }
   }, [currentModalSlide])
 
   return (
@@ -32,6 +39,11 @@ const App = () => {
           path='/'
           exact
           component={HomePage}
+        />
+        <Route
+          path='/match/:id'
+          exact
+          component={Match}
         />
         <Route
           path='/blog'

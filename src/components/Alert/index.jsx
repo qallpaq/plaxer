@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { Typography } from '@material-ui/core'
 import { setAlert } from '../../redux/actions'
@@ -32,6 +33,10 @@ const Alert = ({message}) => {
       </Typography>
     </motion.div>
   )
+}
+
+Alert.propTypes = {
+  message: PropTypes.string.isRequired
 }
 
 export default Alert

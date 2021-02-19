@@ -10,11 +10,11 @@ import PropTypes from 'prop-types'
 import useStyles from './styles/tabItemCardStyles'
 
 
-const TabItemCard = ({name, number, img, win}) => {
+const TabItemCard = ({name, number, img, win, styles, fontStyles}) => {
   const classes = useStyles()
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={styles}>
       {win &&
       <Typography className={classes.winner}>
         win
@@ -34,6 +34,7 @@ const TabItemCard = ({name, number, img, win}) => {
             gutterBottom
             variant="h5"
             component="h2"
+            style={fontStyles}
           >
             {name}
           </Typography>
@@ -42,6 +43,7 @@ const TabItemCard = ({name, number, img, win}) => {
             variant="body2"
             color="secondary"
             component="p"
+            style={fontStyles}
           >
             {number}
           </Typography>
@@ -55,6 +57,9 @@ TabItemCard.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
+  win: PropTypes.bool.isRequired,
+  styles: PropTypes.object,
+  fontStyles: PropTypes.object
 }
 
 export default TabItemCard
