@@ -10,14 +10,14 @@ export const useSelectorContext = () => {
 
 const SelectorContextProvider = ({children}) => {
   const selectors = {
-    aboutTabs: useSelector(({root}) => root.aboutTabs),
-    blogTabs: useSelector(({root}) => root.blogTabs),
-    gamesTabs: useSelector(({root}) => root.gamesTabs),
-    currentModalSlide: useSelector(({root}) => root.currentModalSlide),
-    currentPage: useSelector(({root}) => root.currentPage),
-    blogComments: useSelector(({root}) => root.blogComments),
-    matchComments: useSelector(({root}) => root.matchComments),
-    alert: useSelector(({root}) => root.alert)
+    aboutTabs: useSelector(({aboutTabs}) => aboutTabs),
+    blogTabs: useSelector(({blogTabs}) => blogTabs),
+    gamesTabs: useSelector(({gamesTabs}) => gamesTabs),
+    currentModalSlide: useSelector(({currentModalSlide}) => currentModalSlide),
+    currentPage: useSelector(({currentPage}) => currentPage),
+    blogComments: useSelector(({blogComments}) => blogComments),
+    matchComments: useSelector(({matchComments}) => matchComments),
+    alert: useSelector(({alert}) => alert)
   }
 
   return (

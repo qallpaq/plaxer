@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
+import { useSelectorContext } from '../SelectorContext'
+import { changeModalSlide } from '../../redux/actions'
 import Header from '../Header'
 import {
   HomePage,
   BlogPage,
   BlogDetailsPage,
   AboutPage,
-  ContactsPage
+  ContactsPage,
+  MatchPage
 } from '../pages'
 import Footer from '../Footer'
 import useStyles from './styles/styles'
-import { useSelectorContext } from '../SelectorContext'
-import { changeModalSlide } from '../../redux/actions'
-import Match from '../Match'
 
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
         <Route
           path='/match/:id'
           exact
-          component={Match}
+          component={MatchPage}
         />
         <Route
           path='/blog'

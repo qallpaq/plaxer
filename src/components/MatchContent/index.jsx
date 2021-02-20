@@ -7,10 +7,10 @@ import ContactForm from '../ContactForm'
 import { useSelectorContext } from '../SelectorContext'
 import Comments from '../Comments'
 import { addMatchComment } from '../../redux/actions'
-import useStyles from './styles/MatchContentStyles'
+import useStyles from './styles/styles'
 
 
-const MatchContent = ({game}) => {
+const Index = ({game}) => {
   const classes = useStyles()
 
   const {matchComments} = useSelectorContext()
@@ -70,8 +70,8 @@ const MatchContent = ({game}) => {
   )
 }
 
-MatchContent.propTypes = {
+Index.propTypes = {
   game: PropTypes.object.isRequired
 }
 
-export default MatchContent
+export default Index

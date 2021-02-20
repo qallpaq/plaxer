@@ -7,15 +7,15 @@ import {
 import Page from '../Page'
 import { useSelectorContext } from '../SelectorContext'
 import TabItemCard from '../HomePageTabItem/TabItemCard'
-import MatchContent from './MatchContent'
+import MatchContent from '../MatchContent'
 import dota from '../../assets/images/match/608636.jpg'
 import csgo from '../../assets/images/match/match_csgo-min.jpg'
 import pubg from '../../assets/images/match/match_pubg-min.jpg'
 import fortnite from '../../assets/images/match/match_fortnite-min.png'
-import useStyles from './styles/styles'
+import useStyles from './styles/matchPageStyles'
 
 
-const Match = ({match}) => {
+const MatchPage = ({match}) => {
   const id = match.params.id
   const {gamesTabs} = useSelectorContext()
   const game = gamesTabs.find(game => game.id === +id)
@@ -68,4 +68,4 @@ const Match = ({match}) => {
   )
 }
 
-export default Match
+export default MatchPage

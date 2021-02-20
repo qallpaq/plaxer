@@ -5,6 +5,7 @@ import { HashRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import store from './redux/store'
 import SelectorContextProvider from './components/SelectorContext'
+import 'normalize-css'
 import theme from './theme'
 import App from './components/App'
 
