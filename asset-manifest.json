@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/plaxer/static/css/main.638287f2.chunk.css",
-    "main.js": "/plaxer/static/js/main.bf365c0e.chunk.js",
-    "main.js.map": "/plaxer/static/js/main.bf365c0e.chunk.js.map",
+    "main.js": "/plaxer/static/js/main.d909ba15.chunk.js",
+    "main.js.map": "/plaxer/static/js/main.d909ba15.chunk.js.map",
     "runtime-main.js": "/plaxer/static/js/runtime-main.b95429ba.js",
     "runtime-main.js.map": "/plaxer/static/js/runtime-main.b95429ba.js.map",
     "static/css/2.32fc65d3.chunk.css": "/plaxer/static/css/2.32fc65d3.chunk.css",
-    "static/js/2.89c1bb80.chunk.js": "/plaxer/static/js/2.89c1bb80.chunk.js",
-    "static/js/2.89c1bb80.chunk.js.map": "/plaxer/static/js/2.89c1bb80.chunk.js.map",
+    "static/js/2.52350b0a.chunk.js": "/plaxer/static/js/2.52350b0a.chunk.js",
+    "static/js/2.52350b0a.chunk.js.map": "/plaxer/static/js/2.52350b0a.chunk.js.map",
     "index.html": "/plaxer/index.html",
     "static/css/2.32fc65d3.chunk.css.map": "/plaxer/static/css/2.32fc65d3.chunk.css.map",
     "static/css/main.638287f2.chunk.css.map": "/plaxer/static/css/main.638287f2.chunk.css.map",
-    "static/js/2.89c1bb80.chunk.js.LICENSE.txt": "/plaxer/static/js/2.89c1bb80.chunk.js.LICENSE.txt",
+    "static/js/2.52350b0a.chunk.js.LICENSE.txt": "/plaxer/static/js/2.52350b0a.chunk.js.LICENSE.txt",
     "static/media/1.80f3dd27.jpg": "/plaxer/static/media/1.80f3dd27.jpg",
     "static/media/1.935d3259.jpg": "/plaxer/static/media/1.935d3259.jpg",
     "static/media/10.6774a476.jpg": "/plaxer/static/media/10.6774a476.jpg",
@@ -88,8 +88,8 @@
   "entrypoints": [
     "static/js/runtime-main.b95429ba.js",
     "static/css/2.32fc65d3.chunk.css",
-    "static/js/2.89c1bb80.chunk.js",
+    "static/js/2.52350b0a.chunk.js",
     "static/css/main.638287f2.chunk.css",
-    "static/js/main.bf365c0e.chunk.js"
+    "static/js/main.d909ba15.chunk.js"
   ]
 }
